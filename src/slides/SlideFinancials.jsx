@@ -52,7 +52,7 @@ export default function SlideFinancials() {
                 Current Agency Model
               </div>
               <div style={{ fontSize: "clamp(26px, 3vw, 36px)", fontWeight: 700, color: "#F9A8A8", fontFamily: FONT_BODY }}>
-                ~<AnimatedCounter value="1372800" prefix="\u00A3" delay={0.7} />
+                ~<AnimatedCounter value="1372800" prefix="£" delay={0.7} />
               </div>
               <div style={{ fontSize: 12, color: `${C.cream}55`, marginTop: 4, fontFamily: FONT_BODY }}>Annual cost</div>
               <div style={{ fontSize: 13, color: `${C.cream}77`, marginTop: 14, lineHeight: 1.7, fontFamily: FONT_BODY }}>
@@ -82,7 +82,7 @@ export default function SlideFinancials() {
                 CareSyndicate Model B
               </div>
               <div style={{ fontSize: "clamp(26px, 3vw, 36px)", fontWeight: 700, color: "#A8D8B0", fontFamily: FONT_BODY }}>
-                ~<AnimatedCounter value="1070680" prefix="\u00A3" delay={0.9} />
+                ~<AnimatedCounter value="1070680" prefix="£" delay={0.9} />
               </div>
               <div style={{ fontSize: 12, color: `${C.cream}55`, marginTop: 4, fontFamily: FONT_BODY }}>Annual cost</div>
               <div style={{ fontSize: 13, color: `${C.cream}77`, marginTop: 14, lineHeight: 1.7, fontFamily: FONT_BODY }}>
@@ -109,7 +109,7 @@ export default function SlideFinancials() {
             }}
           >
             <div style={{ fontSize: "clamp(30px, 4vw, 44px)", fontWeight: 700, color: C.white, fontFamily: FONT_BODY }}>
-              ~<AnimatedCounter value="302120" prefix="\u00A3" delay={1.3} />
+              ~<AnimatedCounter value="302120" prefix="£" delay={1.3} />
             </div>
             <div style={{ fontSize: 15, fontWeight: 500, marginTop: 6, color: `${C.white}CC`, fontFamily: FONT_BODY }}>
               Annual saving (22%) — with full compliance, risk elimination, and transparency

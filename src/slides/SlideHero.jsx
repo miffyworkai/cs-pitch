@@ -25,26 +25,6 @@ export default function SlideHero() {
       />
 
       <div style={{ position: "relative", textAlign: "center", maxWidth: 800, padding: "0 40px" }}>
-        <Stagger delay={0.2}>
-          <div
-            style={{
-              display: "inline-block",
-              fontSize: 11,
-              fontWeight: 600,
-              letterSpacing: 3,
-              textTransform: "uppercase",
-              color: C.orchid,
-              marginBottom: 32,
-              border: `1px solid ${C.orchid}35`,
-              padding: "8px 22px",
-              borderRadius: 24,
-              fontFamily: FONT_BODY,
-            }}
-          >
-            Investor & Partner Pitch &mdash; 2026
-          </div>
-        </Stagger>
-
         <Stagger delay={0.4}>
           <h1
             style={{
@@ -91,7 +71,7 @@ export default function SlideHero() {
             }}
           >
             {[
-              { val: "6.7", pre: "\u00A3", suf: "B", label: "UK Domiciliary Market" },
+              { val: "6.7", pre: "£", suf: "B", label: "UK Domiciliary Market" },
               { val: "152", suf: "K", label: "Unfilled Roles" },
               { val: "1.6", suf: "M", label: "Care Workforce" },
             ].map((s, i) => (
