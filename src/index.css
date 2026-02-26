@@ -1,0 +1,57 @@
+:root {
+  --plum: #6B4C8C;
+  --orchid: #D4A5D8;
+  --blush: #F4D5E8;
+  --cream: #FFF8F0;
+  --magenta: #C7418C;
+  --sage: #7C9885;
+  --dark: #1A0F2B;
+  --white: #FFFFFF;
+  --deep-plum: #3D1F5C;
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'DM Sans', -apple-system, sans-serif;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--dark);
+  color: var(--cream);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+::selection {
+  background: var(--magenta);
+  color: var(--white);
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--orchid);
+  outline-offset: 2px;
+}
