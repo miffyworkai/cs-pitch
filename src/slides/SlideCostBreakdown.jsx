@@ -5,9 +5,9 @@ import Stagger from "../components/Stagger";
 
 export default function SlideCostBreakdown() {
   const stats = [
-    { val: "\u00A322\u201325/hr", label: "Blended rate charged", sub: "No cost breakdown provided" },
-    { val: "\u00A314\u201316/hr", label: "Worker take-home", sub: "After umbrella deductions" },
-    { val: "15\u201330%", label: "Agency margin", sub: "Draining care budgets" },
+    { val: "£22–25/hr", label: "Blended rate charged", sub: "No cost breakdown provided" },
+    { val: "£14–16/hr", label: "Worker take-home", sub: "After umbrella deductions" },
+    { val: "15–30%", label: "Agency margin", sub: "Draining care budgets" },
     { val: "Zero", label: "Audit trail you control", sub: "Evidence held by agency" },
   ];
 
