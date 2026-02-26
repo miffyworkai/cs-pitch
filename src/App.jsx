@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { C, FONT_BODY } from "./theme";
 import ProgressBar from "./components/ProgressBar";
+import ChatPopup from "./components/ChatPopup";
 import { SLIDES, SLIDE_LABELS } from "./slides";
 
 export default function App() {
@@ -99,7 +100,7 @@ export default function App() {
         style={{
           position: "fixed",
           bottom: 28,
-          right: 32,
+          right: 130,
           zIndex: 1000,
           display: "flex",
           alignItems: "center",
@@ -218,6 +219,9 @@ export default function App() {
           <CurrentSlide />
         </motion.div>
       </AnimatePresence>
+
+      {/* AI Chat */}
+      <ChatPopup />
 
       {/* Keyboard hint */}
       {slide === 0 && (
