@@ -11,7 +11,7 @@ export default function ProgressBar({ current, total }) {
         left: 0,
         right: 0,
         height: 3,
-        background: "rgba(255,255,255,0.06)",
+        background: `${C.blush}`,
         zIndex: 1000,
       }}
     >
@@ -20,7 +20,7 @@ export default function ProgressBar({ current, total }) {
         transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
         style={{
           height: "100%",
-          background: `linear-gradient(90deg, ${C.magenta}, ${C.orchid})`,
+          background: `linear-gradient(90deg, ${C.magenta}, ${C.plum})`,
           borderRadius: "0 2px 2px 0",
         }}
       />

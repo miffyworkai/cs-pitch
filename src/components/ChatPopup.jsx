@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { C, FONT_BODY } from "../theme";
+import { IconChat, IconBot } from "./Icons";
 
 const SYSTEM_PROMPT = `You are the CareSyndicate AI assistant, embedded in the CareSyndicate investor pitch deck. You answer questions about the business, platform, financials, compliance model, and market opportunity with precision and confidence. You have comprehensive knowledge of the entire pitch and all supporting documentation.
 
@@ -271,7 +272,7 @@ export default function ChatPopup() {
           height: 48,
           borderRadius: "50%",
           background: `linear-gradient(135deg, ${C.magenta}, ${C.plum})`,
-          color: C.cream,
+          color: C.white,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -283,7 +284,7 @@ export default function ChatPopup() {
         }}
         title="Ask about the pitch"
       >
-        {isOpen ? "×" : "💬"}
+        {isOpen ? "×" : <IconChat size={20} color={C.white} />}
       </motion.button>
 
       {/* Chat panel */}
@@ -306,9 +307,9 @@ export default function ChatPopup() {
               height: 520,
               maxHeight: "calc(100vh - 120px)",
               borderRadius: 16,
-              background: C.charcoal,
-              border: `1px solid ${C.plum}50`,
-              boxShadow: `0 16px 64px rgba(0,0,0,0.5), 0 0 0 1px ${C.plum}30`,
+              background: C.white,
+              border: `1px solid ${C.blush}`,
+              boxShadow: `0 16px 64px rgba(107,76,140,0.15), 0 0 0 1px ${C.blush}`,
               display: "flex",
               flexDirection: "column",
               overflow: "hidden",
@@ -319,8 +320,7 @@ export default function ChatPopup() {
             <div
               style={{
                 padding: "16px 20px",
-                background: `linear-gradient(135deg, ${C.plum}40, ${C.magenta}20)`,
-                borderBottom: `1px solid ${C.plum}30`,
+                background: `linear-gradient(135deg, ${C.plum}, ${C.magenta})`,
                 display: "flex",
                 alignItems: "center",
                 gap: 10,
@@ -331,21 +331,20 @@ export default function ChatPopup() {
                   width: 32,
                   height: 32,
                   borderRadius: "50%",
-                  background: `linear-gradient(135deg, ${C.magenta}, ${C.plum})`,
+                  background: "rgba(255,255,255,0.2)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: 16,
                   flexShrink: 0,
                 }}
               >
-                🤖
+                <IconBot size={18} color={C.white} />
               </div>
               <div>
-                <div style={{ color: C.cream, fontSize: 14, fontWeight: 600 }}>
+                <div style={{ color: C.white, fontSize: 14, fontWeight: 600 }}>
                   CareSyndicate AI
                 </div>
-                <div style={{ color: C.orchid, fontSize: 11, opacity: 0.7 }}>
+                <div style={{ color: "rgba(255,255,255,0.7)", fontSize: 11 }}>
                   Ask anything about the pitch
                 </div>
               </div>
@@ -360,13 +359,14 @@ export default function ChatPopup() {
                 display: "flex",
                 flexDirection: "column",
                 gap: 12,
+                background: C.cream,
               }}
             >
               {messages.length === 0 && (
                 <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                   <div
                     style={{
-                      color: "rgba(255,248,240,0.5)",
+                      color: `${C.dark}55`,
                       fontSize: 12,
                       marginBottom: 4,
                     }}
@@ -383,9 +383,9 @@ export default function ChatPopup() {
                       style={{
                         padding: "8px 14px",
                         borderRadius: 8,
-                        background: `${C.plum}25`,
-                        border: `1px solid ${C.plum}40`,
-                        color: C.orchid,
+                        background: C.white,
+                        border: `1px solid ${C.blush}`,
+                        color: C.plum,
                         fontSize: 12,
                         textAlign: "left",
                         cursor: "pointer",
@@ -393,12 +393,12 @@ export default function ChatPopup() {
                         fontFamily: FONT_BODY,
                       }}
                       onMouseEnter={(e) => {
-                        e.target.style.background = `${C.plum}40`;
-                        e.target.style.borderColor = `${C.orchid}60`;
+                        e.target.style.background = `${C.plum}08`;
+                        e.target.style.borderColor = C.orchid;
                       }}
                       onMouseLeave={(e) => {
-                        e.target.style.background = `${C.plum}25`;
-                        e.target.style.borderColor = `${C.plum}40`;
+                        e.target.style.background = C.white;
+                        e.target.style.borderColor = C.blush;
                       }}
                     >
                       {q}
@@ -422,14 +422,15 @@ export default function ChatPopup() {
                       borderRadius: msg.role === "user" ? "12px 12px 2px 12px" : "12px 12px 12px 2px",
                       background:
                         msg.role === "user"
-                          ? `linear-gradient(135deg, ${C.magenta}90, ${C.plum}90)`
-                          : `${C.dark}cc`,
-                      color: C.cream,
+                          ? `linear-gradient(135deg, ${C.magenta}, ${C.plum})`
+                          : C.white,
+                      color: msg.role === "user" ? C.white : C.dark,
                       fontSize: 13,
                       lineHeight: 1.55,
                       whiteSpace: "pre-wrap",
                       wordBreak: "break-word",
-                      border: msg.role === "assistant" ? `1px solid ${C.plum}30` : "none",
+                      border: msg.role === "assistant" ? `1px solid ${C.blush}` : "none",
+                      boxShadow: msg.role === "assistant" ? `0 1px 4px ${C.plum}08` : "none",
                     }}
                   >
                     {msg.content}
@@ -443,8 +444,8 @@ export default function ChatPopup() {
                     style={{
                       padding: "10px 14px",
                       borderRadius: "12px 12px 12px 2px",
-                      background: `${C.dark}cc`,
-                      border: `1px solid ${C.plum}30`,
+                      background: C.white,
+                      border: `1px solid ${C.blush}`,
                       display: "flex",
                       gap: 4,
                     }}
@@ -458,7 +459,7 @@ export default function ChatPopup() {
                           width: 6,
                           height: 6,
                           borderRadius: "50%",
-                          background: C.orchid,
+                          background: C.plum,
                         }}
                       />
                     ))}
@@ -473,9 +474,10 @@ export default function ChatPopup() {
             <div
               style={{
                 padding: "12px 16px 16px",
-                borderTop: `1px solid ${C.plum}20`,
+                borderTop: `1px solid ${C.blush}`,
                 display: "flex",
                 gap: 8,
+                background: C.white,
               }}
             >
               <input
@@ -489,18 +491,18 @@ export default function ChatPopup() {
                   flex: 1,
                   padding: "10px 14px",
                   borderRadius: 10,
-                  background: `${C.dark}`,
-                  border: `1px solid ${C.plum}40`,
-                  color: C.cream,
+                  background: C.cream,
+                  border: `1px solid ${C.blush}`,
+                  color: C.dark,
                   fontSize: 13,
                   fontFamily: FONT_BODY,
                   outline: "none",
                 }}
                 onFocus={(e) => {
-                  e.target.style.borderColor = `${C.orchid}80`;
+                  e.target.style.borderColor = C.orchid;
                 }}
                 onBlur={(e) => {
-                  e.target.style.borderColor = `${C.plum}40`;
+                  e.target.style.borderColor = C.blush;
                 }}
               />
               <button
@@ -513,8 +515,8 @@ export default function ChatPopup() {
                   background:
                     input.trim()
                       ? `linear-gradient(135deg, ${C.magenta}, ${C.plum})`
-                      : "rgba(255,255,255,0.05)",
-                  color: input.trim() ? C.cream : "rgba(255,255,255,0.2)",
+                      : `${C.dark}08`,
+                  color: input.trim() ? C.white : `${C.dark}30`,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",

@@ -40,7 +40,7 @@ export default function Tooltip({ children, content }) {
             lineHeight: 1.6,
             maxWidth: 340,
             zIndex: 9999,
-            boxShadow: "0 12px 40px rgba(26,15,43,0.5)",
+            boxShadow: "0 12px 40px rgba(26,15,43,0.25)",
             fontWeight: 400,
             fontFamily: FONT_BODY,
             pointerEvents: "none",

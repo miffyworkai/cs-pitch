@@ -3,6 +3,7 @@ import { C, FONT_DISPLAY, FONT_BODY } from "../theme";
 import Slide from "../components/Slide";
 import Stagger from "../components/Stagger";
 import DeepDive from "../components/DeepDive";
+import { IconLightbulb } from "../components/Icons";
 
 export default function SlideDeadline() {
   const milestones = [
@@ -16,8 +17,8 @@ export default function SlideDeadline() {
   return (
     <Slide
       bg={`
-        radial-gradient(ellipse at 50% 50%, ${C.redDark}60 0%, transparent 60%),
-        ${C.dark}
+        radial-gradient(ellipse at 50% 50%, ${C.red}06 0%, transparent 60%),
+        ${C.cream}
       `}
       style={{ justifyContent: "flex-start" }}
     >
@@ -32,8 +33,8 @@ export default function SlideDeadline() {
               fontWeight: 700,
               letterSpacing: 3,
               textTransform: "uppercase",
-              color: "#F9A8A8",
-              border: `1px solid ${C.red}40`,
+              color: C.red,
+              border: `1px solid ${C.red}30`,
               padding: "8px 22px",
               borderRadius: 24,
               fontFamily: FONT_BODY,
@@ -47,23 +48,24 @@ export default function SlideDeadline() {
         <Stagger delay={0.3}>
           <h2 style={{
             fontSize: "clamp(30px, 4.5vw, 52px)",
-            fontWeight: 400,
-            color: C.white,
+            fontWeight: 700,
+            color: C.plum,
             margin: "0 0 16px",
             lineHeight: 1.1,
             fontFamily: FONT_DISPLAY,
             textAlign: "center",
+            letterSpacing: "-0.02em",
           }}>
             Joint & Several Liability
             <br />
-            Is <span style={{ color: "#F9A8A8", fontStyle: "italic" }}>Weeks Away</span>
+            Is <span style={{ color: C.red, fontStyle: "italic" }}>Weeks Away</span>
           </h2>
         </Stagger>
 
         <Stagger delay={0.55}>
           <p style={{
             fontSize: 16,
-            color: `${C.cream}99`,
+            color: `${C.dark}88`,
             lineHeight: 1.65,
             maxWidth: 580,
             margin: "0 auto 32px",
@@ -85,10 +87,10 @@ export default function SlideDeadline() {
           <div style={{
             display: "flex", alignItems: "center", gap: 12, marginBottom: 18,
           }}>
-            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase", color: "#F9A8A8", fontFamily: FONT_BODY }}>
+            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase", color: C.red, fontFamily: FONT_BODY }}>
               Regulatory Timeline
             </div>
-            <div style={{ flex: 1, height: 1, background: "rgba(249,168,168,0.2)" }} />
+            <div style={{ flex: 1, height: 1, background: `${C.red}18` }} />
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
@@ -103,15 +105,15 @@ export default function SlideDeadline() {
                   alignItems: "flex-start",
                   gap: 14,
                   padding: "12px 16px",
-                  background: m.highlight ? `rgba(217,68,68,0.12)` : "rgba(255,255,255,0.04)",
+                  background: m.highlight ? `${C.red}06` : C.white,
                   borderRadius: 12,
-                  border: `1px solid ${m.highlight ? `${C.red}30` : "rgba(255,255,255,0.06)"}`,
+                  border: `1px solid ${m.highlight ? `${C.red}20` : C.blush}`,
                 }}
               >
                 <div style={{
                   fontSize: 12,
                   fontWeight: 700,
-                  color: m.highlight ? "#F9A8A8" : C.orchid,
+                  color: m.highlight ? C.red : C.plum,
                   fontFamily: FONT_BODY,
                   minWidth: 70,
                   flexShrink: 0,
@@ -120,7 +122,7 @@ export default function SlideDeadline() {
                 </div>
                 <div style={{
                   fontSize: 13,
-                  color: `${C.cream}CC`,
+                  color: `${C.dark}CC`,
                   lineHeight: 1.5,
                   fontFamily: FONT_BODY,
                 }}>
@@ -132,11 +134,11 @@ export default function SlideDeadline() {
         </motion.div>
 
         <div style={{ marginTop: 18 }}>
-          <DeepDive title="Why value extends beyond JSL" icon="&#128161;" color={C.red}>
+          <DeepDive title="Why value extends beyond JSL" icon={<IconLightbulb size={18} color={C.red} />} color={C.red}>
             <p>Even if HMRC delays JSL implementation, CareSyndicate's value proposition is independent of any single regulation:</p>
-            <p style={{ marginTop: 8 }}><strong style={{ color: C.cream }}>Cost savings are permanent (22%):</strong> The agency-umbrella markup exists regardless of JSL. Removing it saves money from day one.</p>
-            <p style={{ marginTop: 8 }}><strong style={{ color: C.cream }}>CQC readiness is ongoing:</strong> Inspection-ready reporting, credential monitoring, and evidence packs are valuable today and every day.</p>
-            <p style={{ marginTop: 8 }}><strong style={{ color: C.cream }}>Compliance automation has indefinite value:</strong> CEST assessments, insurance monitoring, DBS checks, and audit trails protect providers against existing obligations — not just future ones.</p>
+            <p style={{ marginTop: 8 }}><strong style={{ color: C.dark }}>Cost savings are permanent (22%):</strong> The agency-umbrella markup exists regardless of JSL. Removing it saves money from day one.</p>
+            <p style={{ marginTop: 8 }}><strong style={{ color: C.dark }}>CQC readiness is ongoing:</strong> Inspection-ready reporting, credential monitoring, and evidence packs are valuable today and every day.</p>
+            <p style={{ marginTop: 8 }}><strong style={{ color: C.dark }}>Compliance automation has indefinite value:</strong> CEST assessments, insurance monitoring, DBS checks, and audit trails protect providers against existing obligations — not just future ones.</p>
           </DeepDive>
         </div>
       </div>

@@ -92,7 +92,7 @@ export default function App() {
   const CurrentSlide = SLIDES[slide].component;
 
   return (
-    <div style={{ width: "100vw", height: "100vh", overflow: "hidden", position: "relative", background: C.dark }}>
+    <div style={{ width: "100vw", height: "100vh", overflow: "hidden", position: "relative", background: C.cream }}>
       <ProgressBar current={slide} total={totalSlides} />
 
       {/* Slide number */}
@@ -108,7 +108,7 @@ export default function App() {
           fontFamily: FONT_BODY,
         }}
       >
-        <span style={{ fontSize: 12, color: "rgba(255,248,240,0.35)", fontWeight: 500 }}>
+        <span style={{ fontSize: 12, color: `${C.dark}44`, fontWeight: 500 }}>
           {String(slide + 1).padStart(2, "0")} / {totalSlides}
         </span>
       </div>
@@ -138,8 +138,8 @@ export default function App() {
               background: i === slide
                 ? C.magenta
                 : i < slide
-                ? C.orchid + "60"
-                : "rgba(255,255,255,0.12)",
+                ? C.orchid + "70"
+                : `${C.dark}15`,
               transition: "all 0.35s cubic-bezier(0.4,0,0.2,1)",
               padding: 0,
             }}
@@ -164,8 +164,8 @@ export default function App() {
             width: 40,
             height: 40,
             borderRadius: "50%",
-            background: slide === 0 ? "rgba(255,255,255,0.04)" : "rgba(255,255,255,0.08)",
-            color: slide === 0 ? "rgba(255,255,255,0.15)" : C.cream,
+            background: slide === 0 ? `${C.dark}06` : `${C.plum}10`,
+            color: slide === 0 ? `${C.dark}25` : C.plum,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -183,8 +183,8 @@ export default function App() {
             width: 40,
             height: 40,
             borderRadius: "50%",
-            background: slide === totalSlides - 1 ? "rgba(255,255,255,0.04)" : "rgba(255,255,255,0.08)",
-            color: slide === totalSlides - 1 ? "rgba(255,255,255,0.15)" : C.cream,
+            background: slide === totalSlides - 1 ? `${C.dark}06` : `${C.plum}10`,
+            color: slide === totalSlides - 1 ? `${C.dark}25` : C.plum,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -239,7 +239,7 @@ export default function App() {
             alignItems: "center",
             gap: 8,
             fontSize: 12,
-            color: "rgba(255,248,240,0.3)",
+            color: `${C.dark}40`,
             fontFamily: FONT_BODY,
           }}
         >
@@ -250,7 +250,7 @@ export default function App() {
             width: 24,
             height: 22,
             borderRadius: 4,
-            border: "1px solid rgba(255,255,255,0.15)",
+            border: `1px solid ${C.dark}20`,
             fontSize: 10,
           }}>&#8592;</span>
           <span style={{
@@ -260,7 +260,7 @@ export default function App() {
             width: 24,
             height: 22,
             borderRadius: 4,
-            border: "1px solid rgba(255,255,255,0.15)",
+            border: `1px solid ${C.dark}20`,
             fontSize: 10,
           }}>&#8594;</span>
           <span>to navigate</span>

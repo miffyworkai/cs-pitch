@@ -28,7 +28,7 @@ const objections = [
 
 export default function SlideObjections() {
   return (
-    <Slide bg={C.dark} style={{ justifyContent: "flex-start" }}>
+    <Slide bg={C.cream} style={{ justifyContent: "flex-start" }}>
       <div style={{ maxWidth: 880, padding: "60px 40px", width: "100%" }}>
         <Stagger>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
@@ -40,10 +40,10 @@ export default function SlideObjections() {
         </Stagger>
 
         <Stagger delay={0.15}>
-          <h2 style={{ fontSize: "clamp(28px, 3.5vw, 44px)", fontWeight: 400, color: C.white, margin: "0 0 8px", lineHeight: 1.15, fontFamily: FONT_DISPLAY }}>
+          <h2 style={{ fontSize: "clamp(28px, 3.5vw, 44px)", fontWeight: 700, color: C.plum, margin: "0 0 8px", lineHeight: 1.15, fontFamily: FONT_DISPLAY, letterSpacing: "-0.02em" }}>
             What Clients <span style={{ color: C.orchid, fontStyle: "italic" }}>Ask Us</span>
           </h2>
-          <p style={{ fontSize: 14, color: `${C.cream}66`, marginBottom: 28, fontFamily: FONT_BODY }}>
+          <p style={{ fontSize: 14, color: `${C.dark}66`, marginBottom: 28, fontFamily: FONT_BODY }}>
             Data-backed responses to the questions we hear most often.
           </p>
         </Stagger>
@@ -56,17 +56,17 @@ export default function SlideObjections() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35 + i * 0.1, duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
               style={{
-                background: "rgba(255,255,255,0.04)",
+                background: C.white,
                 borderRadius: 14,
-                border: "1px solid rgba(255,255,255,0.08)",
+                border: `1px solid ${C.blush}`,
                 padding: "18px 22px",
-                backdropFilter: "blur(10px)",
+                boxShadow: `0 1px 4px ${C.plum}04`,
               }}
             >
               <div style={{
                 fontSize: 14,
                 fontWeight: 600,
-                color: C.orchid,
+                color: C.plum,
                 marginBottom: 8,
                 fontFamily: FONT_BODY,
                 fontStyle: "italic",
@@ -75,7 +75,7 @@ export default function SlideObjections() {
               </div>
               <div style={{
                 fontSize: 13,
-                color: `${C.cream}BB`,
+                color: `${C.dark}BB`,
                 lineHeight: 1.6,
                 fontFamily: FONT_BODY,
               }}>

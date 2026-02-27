@@ -7,18 +7,18 @@ export default function SlideHero() {
   return (
     <Slide
       bg={`
-        radial-gradient(ellipse at 20% 50%, ${C.deepPlum} 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 20%, ${C.magenta}15 0%, transparent 50%),
-        radial-gradient(ellipse at 50% 90%, ${C.plum}20 0%, transparent 40%),
-        ${C.dark}
+        radial-gradient(ellipse at 20% 50%, ${C.orchid}10 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, ${C.magenta}08 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 90%, ${C.plum}06 0%, transparent 40%),
+        ${C.cream}
       `}
     >
-      {/* Grain overlay */}
+      {/* Subtle grain overlay */}
       <div
         style={{
           position: "absolute",
           inset: 0,
-          opacity: 0.03,
+          opacity: 0.02,
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
           backgroundSize: "200px",
         }}
@@ -29,16 +29,17 @@ export default function SlideHero() {
           <h1
             style={{
               fontSize: "clamp(36px, 5.5vw, 64px)",
-              fontWeight: 400,
-              color: C.white,
+              fontWeight: 700,
+              color: C.plum,
               margin: "0 0 24px",
               lineHeight: 1.1,
               fontFamily: FONT_DISPLAY,
+              letterSpacing: "-0.02em",
             }}
           >
             The Care Sector's
             <br />
-            <span style={{ color: C.orchid }}>Workforce Model</span> Is Broken
+            <span style={{ color: C.magenta }}>Workforce Model</span> Is Broken
           </h1>
         </Stagger>
 
@@ -46,7 +47,7 @@ export default function SlideHero() {
           <p
             style={{
               fontSize: "clamp(16px, 2vw, 20px)",
-              color: `${C.cream}AA`,
+              color: `${C.dark}99`,
               lineHeight: 1.65,
               maxWidth: 580,
               margin: "0 auto 48px",
@@ -67,11 +68,11 @@ export default function SlideHero() {
               gap: 48,
               flexWrap: "wrap",
               padding: "32px 0 0",
-              borderTop: `1px solid ${C.orchid}20`,
+              borderTop: `1px solid ${C.blush}`,
             }}
           >
             {[
-              { val: "6.7", pre: "£", suf: "B", label: "UK Domiciliary Market" },
+              { val: "6.7", pre: "\u00A3", suf: "B", label: "UK Domiciliary Market" },
               { val: "152", suf: "K", label: "Unfilled Roles" },
               { val: "1.6", suf: "M", label: "Care Workforce" },
             ].map((s, i) => (
@@ -80,7 +81,7 @@ export default function SlideHero() {
                   style={{
                     fontSize: "clamp(28px, 3.5vw, 42px)",
                     fontWeight: 700,
-                    color: C.orchid,
+                    color: C.magenta,
                     fontFamily: FONT_BODY,
                     letterSpacing: "-1px",
                   }}
@@ -95,7 +96,7 @@ export default function SlideHero() {
                 <div
                   style={{
                     fontSize: 12,
-                    color: `${C.cream}66`,
+                    color: `${C.dark}55`,
                     marginTop: 6,
                     fontWeight: 500,
                     letterSpacing: 0.5,
@@ -116,13 +117,13 @@ export default function SlideHero() {
               display: "inline-flex",
               alignItems: "center",
               gap: 8,
-              background: `${C.red}20`,
-              border: `1px solid ${C.red}40`,
+              background: `${C.red}10`,
+              border: `1px solid ${C.red}30`,
               padding: "10px 20px",
               borderRadius: 12,
               fontSize: 14,
               fontWeight: 600,
-              color: "#F9A8A8",
+              color: C.red,
               fontFamily: FONT_BODY,
             }}
           >

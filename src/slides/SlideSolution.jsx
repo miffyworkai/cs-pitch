@@ -7,9 +7,9 @@ export default function SlideSolution() {
   return (
     <Slide
       bg={`
-        radial-gradient(ellipse at 40% 30%, ${C.sage}18 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 80%, ${C.plum}15 0%, transparent 40%),
-        ${C.dark}
+        radial-gradient(ellipse at 40% 30%, ${C.sage}08 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, ${C.plum}06 0%, transparent 40%),
+        ${C.cream}
       `}
     >
       <div style={{ maxWidth: 800, padding: "0 40px", width: "100%", textAlign: "center" }}>
@@ -22,7 +22,7 @@ export default function SlideSolution() {
             textTransform: "uppercase",
             color: C.sage,
             marginBottom: 28,
-            border: `1px solid ${C.sage}35`,
+            border: `1px solid ${C.sage}30`,
             padding: "8px 22px",
             borderRadius: 24,
             fontFamily: FONT_BODY,
@@ -34,11 +34,12 @@ export default function SlideSolution() {
         <Stagger delay={0.3}>
           <h2 style={{
             fontSize: "clamp(34px, 5vw, 58px)",
-            fontWeight: 400,
-            color: C.white,
+            fontWeight: 700,
+            color: C.plum,
             margin: "0 0 24px",
             lineHeight: 1.1,
             fontFamily: FONT_DISPLAY,
+            letterSpacing: "-0.02em",
           }}>
             <span style={{ color: C.orchid }}>Direct.</span>{" "}
             <span style={{ color: C.sage }}>Compliant.</span>{" "}
@@ -49,7 +50,7 @@ export default function SlideSolution() {
         <Stagger delay={0.55}>
           <p style={{
             fontSize: "clamp(16px, 2vw, 20px)",
-            color: `${C.cream}99`,
+            color: `${C.dark}88`,
             lineHeight: 1.7,
             maxWidth: 600,
             margin: "0 auto 48px",
@@ -77,12 +78,12 @@ export default function SlideSolution() {
                 style={{
                   padding: "10px 20px",
                   borderRadius: 30,
-                  border: `1px solid ${t.color}50`,
+                  border: `1px solid ${t.color}40`,
                   color: t.color,
                   fontSize: 13,
                   fontWeight: 600,
                   fontFamily: FONT_BODY,
-                  background: `${t.color}10`,
+                  background: `${t.color}08`,
                 }}
               >
                 {t.label}

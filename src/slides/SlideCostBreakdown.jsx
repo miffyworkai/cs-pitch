@@ -14,8 +14,8 @@ export default function SlideCostBreakdown() {
   return (
     <Slide
       bg={`
-        radial-gradient(ellipse at 60% 60%, ${C.deepPlum}50 0%, transparent 50%),
-        ${C.dark}
+        radial-gradient(ellipse at 60% 60%, ${C.orchid}08 0%, transparent 50%),
+        ${C.cream}
       `}
     >
       <div style={{ maxWidth: 920, padding: "0 40px", width: "100%" }}>
@@ -24,12 +24,12 @@ export default function SlideCostBreakdown() {
             <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase", color: C.magenta, fontFamily: FONT_BODY }}>
               The True Cost
             </div>
-            <div style={{ flex: 1, height: 1, background: `${C.magenta}30` }} />
+            <div style={{ flex: 1, height: 1, background: `${C.magenta}25` }} />
           </div>
         </Stagger>
 
         <Stagger delay={0.15}>
-          <h2 style={{ fontSize: "clamp(30px, 4vw, 48px)", fontWeight: 400, color: C.white, margin: "0 0 36px", lineHeight: 1.1, fontFamily: FONT_DISPLAY }}>
+          <h2 style={{ fontSize: "clamp(30px, 4vw, 48px)", fontWeight: 700, color: C.plum, margin: "0 0 36px", lineHeight: 1.1, fontFamily: FONT_DISPLAY, letterSpacing: "-0.02em" }}>
             Where the Money <span style={{ color: C.magenta, fontStyle: "italic" }}>Goes</span>
           </h2>
         </Stagger>
@@ -46,15 +46,15 @@ export default function SlideCostBreakdown() {
                 style={{
                   textAlign: "center",
                   padding: "28px 20px",
-                  background: "rgba(255,255,255,0.04)",
+                  background: C.white,
                   borderRadius: 16,
-                  border: "1px solid rgba(255,255,255,0.06)",
-                  backdropFilter: "blur(10px)",
+                  border: `1px solid ${C.blush}`,
+                  boxShadow: `0 1px 6px ${C.plum}06`,
                 }}
               >
                 <div style={{ fontSize: "clamp(22px, 2.5vw, 30px)", fontWeight: 700, color: C.magenta, fontFamily: FONT_BODY }}>{s.val}</div>
-                <div style={{ fontSize: 13, fontWeight: 600, color: C.cream, marginTop: 8, fontFamily: FONT_BODY }}>{s.label}</div>
-                <div style={{ fontSize: 12, color: `${C.cream}55`, marginTop: 4, fontFamily: FONT_BODY }}>{s.sub}</div>
+                <div style={{ fontSize: 13, fontWeight: 600, color: C.dark, marginTop: 8, fontFamily: FONT_BODY }}>{s.label}</div>
+                <div style={{ fontSize: 12, color: `${C.dark}55`, marginTop: 4, fontFamily: FONT_BODY }}>{s.sub}</div>
               </div>
             </motion.div>
           ))}

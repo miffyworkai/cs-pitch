@@ -7,13 +7,13 @@ export default function DeepDive({ title, icon, children, color = C.plum }) {
   return (
     <div
       style={{
-        background: open ? `${C.dark}` : "rgba(255,255,255,0.04)",
+        background: open ? C.white : `${C.plum}04`,
         borderRadius: 14,
-        border: `1px solid ${open ? color + "60" : "rgba(255,255,255,0.08)"}`,
+        border: `1px solid ${open ? color + "40" : C.blush}`,
         marginBottom: 10,
         overflow: "hidden",
         transition: "all 0.4s cubic-bezier(0.4,0,0.2,1)",
-        backdropFilter: "blur(10px)",
+        boxShadow: open ? `0 4px 20px ${color}12` : "none",
       }}
     >
       <button
@@ -26,12 +26,12 @@ export default function DeepDive({ title, icon, children, color = C.plum }) {
           padding: "14px 18px",
           fontSize: 14,
           fontWeight: 600,
-          color: C.cream,
+          color: C.dark,
           textAlign: "left",
           fontFamily: FONT_BODY,
         }}
       >
-        <span style={{ fontSize: 18 }}>{icon}</span>
+        <span style={{ fontSize: 18, lineHeight: 1 }}>{icon}</span>
         <span style={{ flex: 1 }}>{title}</span>
         <span
           style={{
@@ -41,8 +41,8 @@ export default function DeepDive({ title, icon, children, color = C.plum }) {
             width: 26,
             height: 26,
             borderRadius: "50%",
-            background: open ? color : "rgba(255,255,255,0.1)",
-            color: C.white,
+            background: open ? color : `${C.plum}12`,
+            color: open ? C.white : C.plum,
             fontSize: 15,
             fontWeight: 700,
             transition: "all 0.3s ease",
@@ -64,7 +64,7 @@ export default function DeepDive({ title, icon, children, color = C.plum }) {
             padding: "0 18px 18px",
             fontSize: 13,
             lineHeight: 1.7,
-            color: "rgba(255,248,240,0.75)",
+            color: `${C.dark}BB`,
           }}
         >
           {children}

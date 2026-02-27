@@ -13,25 +13,25 @@ export default function RiskCard({ icon, risk, exposure, elimination }) {
       style={{
         background: flipped
           ? `linear-gradient(135deg, ${C.sage}, #5A7E65)`
-          : "rgba(255,255,255,0.05)",
+          : C.white,
         borderRadius: 14,
         padding: "18px 20px",
         cursor: "pointer",
-        border: `1px solid ${flipped ? C.sage + "60" : "rgba(255,255,255,0.08)"}`,
+        border: `1px solid ${flipped ? C.sage + "60" : C.blush}`,
         transition: "all 0.35s ease",
         minHeight: 140,
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        backdropFilter: "blur(10px)",
+        boxShadow: flipped ? "none" : `0 1px 6px ${C.plum}08`,
       }}
     >
       {!flipped ? (
         <>
-          <div style={{ fontSize: 22, marginBottom: 8 }}>{icon}</div>
-          <div style={{ fontSize: 13, fontWeight: 600, color: C.cream, marginBottom: 4 }}>{risk}</div>
-          <div style={{ fontSize: 11, color: "rgba(255,248,240,0.55)", lineHeight: 1.5 }}>{exposure}</div>
-          <div style={{ fontSize: 10, color: C.orchid, marginTop: 8, fontWeight: 500 }}>
+          <div style={{ fontSize: 22, marginBottom: 8, lineHeight: 1 }}>{icon}</div>
+          <div style={{ fontSize: 13, fontWeight: 600, color: C.dark, marginBottom: 4 }}>{risk}</div>
+          <div style={{ fontSize: 11, color: `${C.dark}77`, lineHeight: 1.5 }}>{exposure}</div>
+          <div style={{ fontSize: 10, color: C.magenta, marginTop: 8, fontWeight: 500 }}>
             Click to see elimination →
           </div>
         </>

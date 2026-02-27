@@ -14,5 +14,7 @@ export const C = {
   redDark: "#6B2040",
 };
 
-export const FONT_DISPLAY = "'DM Serif Display', Georgia, serif";
-export const FONT_BODY = "'DM Sans', -apple-system, sans-serif";
+export const FONT = "'Inter', -apple-system, BlinkMacSystemFont, sans-serif";
+// Keep legacy exports for compatibility during migration
+export const FONT_DISPLAY = FONT;
+export const FONT_BODY = FONT;

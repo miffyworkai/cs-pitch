@@ -3,6 +3,7 @@ import { C, FONT_DISPLAY, FONT_BODY } from "../theme";
 import Slide from "../components/Slide";
 import Stagger from "../components/Stagger";
 import DeepDive from "../components/DeepDive";
+import { IconSparkle, IconClipboardCheck } from "../components/Icons";
 
 export default function SlideAutomation() {
   const autoItems = [
@@ -19,19 +20,19 @@ export default function SlideAutomation() {
   ];
 
   return (
-    <Slide bg={C.dark} style={{ justifyContent: "flex-start" }}>
+    <Slide bg={C.cream} style={{ justifyContent: "flex-start" }}>
       <div style={{ maxWidth: 860, padding: "60px 40px", width: "100%" }}>
         <Stagger>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
             <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase", color: C.sage, fontFamily: FONT_BODY }}>
               Automation
             </div>
-            <div style={{ flex: 1, height: 1, background: `${C.sage}30` }} />
+            <div style={{ flex: 1, height: 1, background: `${C.sage}25` }} />
           </div>
         </Stagger>
 
         <Stagger delay={0.15}>
-          <h2 style={{ fontSize: "clamp(28px, 3.5vw, 44px)", fontWeight: 400, color: C.white, margin: "0 0 36px", lineHeight: 1.15, fontFamily: FONT_DISPLAY }}>
+          <h2 style={{ fontSize: "clamp(28px, 3.5vw, 44px)", fontWeight: 700, color: C.plum, margin: "0 0 36px", lineHeight: 1.15, fontFamily: FONT_DISPLAY, letterSpacing: "-0.02em" }}>
             What the CRM Handles <span style={{ color: C.sage, fontStyle: "italic" }}>Automatically</span>
           </h2>
         </Stagger>
@@ -49,7 +50,7 @@ export default function SlideAutomation() {
                 gap: 10,
                 padding: "10px 0",
                 fontSize: 14,
-                color: `${C.cream}CC`,
+                color: `${C.dark}CC`,
                 fontFamily: FONT_BODY,
               }}
             >
@@ -59,17 +60,17 @@ export default function SlideAutomation() {
           ))}
         </div>
 
-        <DeepDive title="AI features integrated into the platform" icon="&#129302;" color={C.sage}>
-          <p><strong style={{ color: C.cream }}>AI Matching Engine:</strong> Skills, location, availability, compliance status, ratings — ranked shortlists with explanations.</p>
-          <p style={{ marginTop: 8 }}><strong style={{ color: C.cream }}>AI Assistant:</strong> Chat or voice. Ask natural-language questions about your workforce data: spend, compliance, expiring credentials.</p>
-          <p style={{ marginTop: 8 }}><strong style={{ color: C.cream }}>CQC Report Generation:</strong> AI-generated inspection-ready compliance reports covering all five CQC domains. Minutes instead of days.</p>
-          <p style={{ marginTop: 8 }}><strong style={{ color: C.cream }}>Predictive Alerts:</strong> Identifies workers approaching credential expiry, declining fill rates, or emerging dependency patterns before they become problems.</p>
+        <DeepDive title="AI features integrated into the platform" icon={<IconSparkle size={18} color={C.sage} />} color={C.sage}>
+          <p><strong style={{ color: C.dark }}>AI Matching Engine:</strong> Skills, location, availability, compliance status, ratings — ranked shortlists with explanations.</p>
+          <p style={{ marginTop: 8 }}><strong style={{ color: C.dark }}>AI Assistant:</strong> Chat or voice. Ask natural-language questions about your workforce data: spend, compliance, expiring credentials.</p>
+          <p style={{ marginTop: 8 }}><strong style={{ color: C.dark }}>CQC Report Generation:</strong> AI-generated inspection-ready compliance reports covering all five CQC domains. Minutes instead of days.</p>
+          <p style={{ marginTop: 8 }}><strong style={{ color: C.dark }}>Predictive Alerts:</strong> Identifies workers approaching credential expiry, declining fill rates, or emerging dependency patterns before they become problems.</p>
         </DeepDive>
-        <DeepDive title="CQC inspection readiness — built in, not bolted on" icon="&#128203;" color={C.sage}>
-          <p>Reports cover <strong style={{ color: C.cream }}>all 5 CQC domains</strong> — Safe, Effective, Caring, Responsive, and Well-led — generated in <strong style={{ color: C.cream }}>minutes, not days</strong>.</p>
-          <p style={{ marginTop: 8 }}><strong style={{ color: C.cream }}>Evidence types:</strong> Credential verification logs, insurance monitoring history, DBS status checks, substitution audit trails, decline rate tracking.</p>
-          <p style={{ marginTop: 8 }}><strong style={{ color: C.cream }}>Traffic-light compliance scoring:</strong> Green (&lt;30% client dependency), Amber (30–60%), Red (&gt;60%) — giving instant visibility of risk concentration.</p>
-          <p style={{ marginTop: 8 }}><strong style={{ color: C.cream }}>Predictive alerts</strong> flag issues before they surface in inspections. Pre-written inspection responses for workforce governance questions are included.</p>
+        <DeepDive title="CQC inspection readiness — built in, not bolted on" icon={<IconClipboardCheck size={18} color={C.sage} />} color={C.sage}>
+          <p>Reports cover <strong style={{ color: C.dark }}>all 5 CQC domains</strong> — Safe, Effective, Caring, Responsive, and Well-led — generated in <strong style={{ color: C.dark }}>minutes, not days</strong>.</p>
+          <p style={{ marginTop: 8 }}><strong style={{ color: C.dark }}>Evidence types:</strong> Credential verification logs, insurance monitoring history, DBS status checks, substitution audit trails, decline rate tracking.</p>
+          <p style={{ marginTop: 8 }}><strong style={{ color: C.dark }}>Traffic-light compliance scoring:</strong> Green (&lt;30% client dependency), Amber (30–60%), Red (&gt;60%) — giving instant visibility of risk concentration.</p>
+          <p style={{ marginTop: 8 }}><strong style={{ color: C.dark }}>Predictive alerts</strong> flag issues before they surface in inspections. Pre-written inspection responses for workforce governance questions are included.</p>
         </DeepDive>
       </div>
     </Slide>

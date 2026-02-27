@@ -13,7 +13,7 @@ export default function Slide({ children, bg, style: extraStyle = {} }) {
         alignItems: "center",
         position: "relative",
         overflow: "auto",
-        background: bg || C.dark,
+        background: bg || C.cream,
         scrollbarWidth: "none",
         msOverflowStyle: "none",
         ...extraStyle,
