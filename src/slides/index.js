@@ -1,5 +1,6 @@
 import SlideHero from "./SlideHero";
 import SlideCrisis from "./SlideCrisis";
+import SlideComplianceBurden from "./SlideComplianceBurden";
 import SlideBrokenModel from "./SlideBrokenModel";
 import SlideSupplyChain from "./SlideSupplyChain";
 import SlideCostBreakdown from "./SlideCostBreakdown";
@@ -18,6 +19,7 @@ import SlideContact from "./SlideContact";
 export const SLIDES = [
   { key: "hero", component: SlideHero },
   { key: "crisis", component: SlideCrisis },
+  { key: "compliance", component: SlideComplianceBurden },
   { key: "broken", component: SlideBrokenModel },
   { key: "supply", component: SlideSupplyChain },
   { key: "cost", component: SlideCostBreakdown },
@@ -37,6 +39,7 @@ export const SLIDES = [
 export const SLIDE_LABELS = [
   "Title",
   "The Crisis",
+  "Compliance",
   "Broken Model",
   "Supply Chain",
   "The Cost",
