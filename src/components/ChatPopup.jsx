@@ -180,23 +180,15 @@ A: Platform fee ~£0.43/hr × average 20 hrs/week × 52 weeks = ~£447/worker/ye
 Q: "What about the insurance costs?"
 A: Workers carry their own insurance (£6M PL + £2M PI) as a condition of engagement. The platform monitors and enforces this. Cost is borne by the worker as part of their self-employed business expenses, not by CareSyndicate or the provider.`;
 
-const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
-const MODEL = "anthropic/claude-haiku-4.5";
+const EDGE_FN_URL = "https://cwerrwpscaeryjshlftq.supabase.co/functions/v1/chat-proxy";
 
 export default function ChatPopup() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [hasKey, setHasKey] = useState(true);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
-
-  const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
-
-  useEffect(() => {
-    if (!apiKey) setHasKey(false);
-  }, [apiKey]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -223,20 +215,10 @@ export default function ChatPopup() {
     ];
 
     try {
-      const res = await fetch(OPENROUTER_URL, {
+      const res = await fetch(EDGE_FN_URL, {
         method: "POST",
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          "Content-Type": "application/json",
-          "HTTP-Referer": window.location.origin,
-          "X-Title": "CareSyndicate Pitch Deck",
-        },
-        body: JSON.stringify({
-          model: MODEL,
-          messages: apiMessages,
-          max_tokens: 1024,
-          temperature: 0.3,
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: apiMessages }),
       });
 
       if (!res.ok) {
@@ -245,7 +227,7 @@ export default function ChatPopup() {
       }
 
       const data = await res.json();
-      const reply = data.choices?.[0]?.message?.content || "No response received.";
+      const reply = data.reply || "No response received.";
       setMessages((prev) => [...prev, { role: "assistant", content: reply }]);
     } catch (err) {
       setMessages((prev) => [
@@ -255,7 +237,7 @@ export default function ChatPopup() {
     } finally {
       setIsLoading(false);
     }
-  }, [input, isLoading, messages, apiKey]);
+  }, [input, isLoading, messages]);
 
   const handleKeyDown = (e) => {
     // Stop propagation so slide nav doesn't fire
@@ -380,23 +362,7 @@ export default function ChatPopup() {
                 gap: 12,
               }}
             >
-              {!hasKey && (
-                <div
-                  style={{
-                    padding: "12px 16px",
-                    borderRadius: 10,
-                    background: `${C.red}20`,
-                    border: `1px solid ${C.red}40`,
-                    color: C.cream,
-                    fontSize: 12,
-                    lineHeight: 1.5,
-                  }}
-                >
-                  Set <code style={{ background: "rgba(255,255,255,0.1)", padding: "1px 5px", borderRadius: 3 }}>VITE_OPENROUTER_API_KEY</code> in your <code style={{ background: "rgba(255,255,255,0.1)", padding: "1px 5px", borderRadius: 3 }}>.env</code> file to enable chat.
-                </div>
-              )}
-
-              {messages.length === 0 && hasKey && (
+              {messages.length === 0 && (
                 <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                   <div
                     style={{
@@ -517,8 +483,8 @@ export default function ChatPopup() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={handleKeyDown}
-                placeholder={hasKey ? "Ask about CareSyndicate..." : "API key required"}
-                disabled={!hasKey || isLoading}
+                placeholder="Ask about CareSyndicate..."
+                disabled={isLoading}
                 style={{
                   flex: 1,
                   padding: "10px 14px",
@@ -539,21 +505,21 @@ export default function ChatPopup() {
               />
               <button
                 onClick={sendMessage}
-                disabled={!input.trim() || isLoading || !hasKey}
+                disabled={!input.trim() || isLoading}
                 style={{
                   width: 40,
                   height: 40,
                   borderRadius: 10,
                   background:
-                    input.trim() && hasKey
+                    input.trim()
                       ? `linear-gradient(135deg, ${C.magenta}, ${C.plum})`
                       : "rgba(255,255,255,0.05)",
-                  color: input.trim() && hasKey ? C.cream : "rgba(255,255,255,0.2)",
+                  color: input.trim() ? C.cream : "rgba(255,255,255,0.2)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   fontSize: 16,
-                  cursor: input.trim() && hasKey ? "pointer" : "default",
+                  cursor: input.trim() ? "pointer" : "default",
                   border: "none",
                   flexShrink: 0,
                   transition: "all 0.15s",
