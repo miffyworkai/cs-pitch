@@ -56,8 +56,8 @@ export default function SlideSolution() {
             fontFamily: FONT_BODY,
             fontWeight: 300,
           }}>
-            An AI-native workforce platform that replaces the agency-umbrella model with direct,
-            compliant engagements — cutting out the middleman while automating the compliance burden.
+            A workforce platform purpose-built for the April 2026 transition — replacing the agency-umbrella
+            model with direct, compliant engagements. Currently onboarding pilot clients ahead of the JSL deadline.
           </p>
         </Stagger>
 

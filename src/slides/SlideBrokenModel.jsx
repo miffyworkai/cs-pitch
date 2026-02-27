@@ -43,6 +43,11 @@ export default function SlideBrokenModel() {
           <DeepDive title="The hidden VAT problem" icon="&#129534;" color={C.magenta}>
             <p>Agencies charge 20% VAT on the full blended rate. For VAT-exempt care providers (most are), this is completely irrecoverable — a dead cost of ~£4.40/hr per worker on a £22/hr charge. At scale, a 100-worker provider loses over <strong style={{ color: C.cream }}>£600,000/year</strong> in irrecoverable VAT.</p>
           </DeepDive>
+          <DeepDive title="Why agencies cannot simply adapt" icon="&#128683;" color={C.magenta}>
+            <p><strong style={{ color: C.cream }}>The cost premium is structural:</strong> agencies charge £19.57/hr versus £9.90/hr for permanent staff — a 98% markup. The umbrella IS their margin structure. Removing it destroys the business model they depend on.</p>
+            <p style={{ marginTop: 10 }}><strong style={{ color: C.cream }}>NHS agency crackdown:</strong> The NHS spends £3bn on agency staff, with a 30% reduction target displacing agencies into social care — increasing cost pressure on providers, not reducing it.</p>
+            <p style={{ marginTop: 10 }}><strong style={{ color: C.cream }}>No direct competitor</strong> occupies CareSyndicate's niche: technology-led, care-specialist, compliance-first. Agencies cannot pivot without abandoning their own revenue model.</p>
+          </DeepDive>
         </div>
       </div>
     </Slide>

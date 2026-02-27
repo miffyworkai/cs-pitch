@@ -65,6 +65,12 @@ export default function SlideAutomation() {
           <p style={{ marginTop: 8 }}><strong style={{ color: C.cream }}>CQC Report Generation:</strong> AI-generated inspection-ready compliance reports covering all five CQC domains. Minutes instead of days.</p>
           <p style={{ marginTop: 8 }}><strong style={{ color: C.cream }}>Predictive Alerts:</strong> Identifies workers approaching credential expiry, declining fill rates, or emerging dependency patterns before they become problems.</p>
         </DeepDive>
+        <DeepDive title="CQC inspection readiness — built in, not bolted on" icon="&#128203;" color={C.sage}>
+          <p>Reports cover <strong style={{ color: C.cream }}>all 5 CQC domains</strong> — Safe, Effective, Caring, Responsive, and Well-led — generated in <strong style={{ color: C.cream }}>minutes, not days</strong>.</p>
+          <p style={{ marginTop: 8 }}><strong style={{ color: C.cream }}>Evidence types:</strong> Credential verification logs, insurance monitoring history, DBS status checks, substitution audit trails, decline rate tracking.</p>
+          <p style={{ marginTop: 8 }}><strong style={{ color: C.cream }}>Traffic-light compliance scoring:</strong> Green (&lt;30% client dependency), Amber (30–60%), Red (&gt;60%) — giving instant visibility of risk concentration.</p>
+          <p style={{ marginTop: 8 }}><strong style={{ color: C.cream }}>Predictive alerts</strong> flag issues before they surface in inspections. Pre-written inspection responses for workforce governance questions are included.</p>
+        </DeepDive>
       </div>
     </Slide>
   );

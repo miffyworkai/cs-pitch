@@ -119,8 +119,33 @@ export default function SlideFinancials() {
 
         <div style={{ marginTop: 16 }}>
           <DeepDive title="VAT savings at scale" icon="&#128200;" color={C.sage}>
-            <p>A provider with <strong style={{ color: C.cream }}>100 workers at 20 hours/week</strong> can save over <strong style={{ color: C.cream }}>£600,000 per year</strong> in irrecoverable VAT by using Model B instead of a standard agency arrangement.</p>
+            <p>A provider with <strong style={{ color: C.cream }}>100 workers at 20 hours/week</strong> eliminates <strong style={{ color: C.cream }}>£546,000–£600,000/year</strong> in irrecoverable VAT by using Model B instead of a standard agency arrangement.</p>
+            <p style={{ marginTop: 8 }}><strong style={{ color: C.cream }}>10–20× ROI:</strong> CareSyndicate's service cost is £15,000–£30,000/year. VAT recovery alone returns 10–20× that figure.</p>
             <p style={{ marginTop: 8 }}>Even under Model A (standard VAT), all compliance, risk elimination, and transparency benefits remain identical.</p>
+          </DeepDive>
+          <DeepDive title="What a transparent invoice looks like" icon="&#128451;" color={C.sage}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 12 }}>
+              <div>
+                <div style={{ fontSize: 12, fontWeight: 700, color: C.sage, textTransform: "uppercase", letterSpacing: 1, marginBottom: 8 }}>CareSyndicate Invoice</div>
+                <div style={{ fontSize: 12, lineHeight: 1.8 }}>
+                  <div>Worker earnings: <strong style={{ color: C.cream }}>£360.00</strong> <span style={{ opacity: 0.6 }}>(20 hrs × £18.00/hr)</span></div>
+                  <div>Platform fee: <strong style={{ color: C.cream }}>£8.60</strong></div>
+                  <div>VAT on platform fee: <strong style={{ color: C.cream }}>£1.72</strong></div>
+                  <div style={{ borderTop: "1px solid rgba(255,255,255,0.15)", marginTop: 6, paddingTop: 6 }}>Total: <strong style={{ color: C.sage, fontSize: 14 }}>£370.32</strong></div>
+                </div>
+              </div>
+              <div>
+                <div style={{ fontSize: 12, fontWeight: 700, color: "#F9A8A8", textTransform: "uppercase", letterSpacing: 1, marginBottom: 8 }}>Agency Equivalent</div>
+                <div style={{ fontSize: 12, lineHeight: 1.8 }}>
+                  <div>Blended charge: <strong style={{ color: C.cream }}>£440.00</strong> <span style={{ opacity: 0.6 }}>(20 hrs × £22.00/hr)</span></div>
+                  <div>VAT (irrecoverable): <strong style={{ color: C.cream }}>£88.00</strong></div>
+                  <div>Breakdown: <strong style={{ color: "#F9A8A8" }}>not provided</strong></div>
+                  <div style={{ borderTop: "1px solid rgba(255,255,255,0.15)", marginTop: 6, paddingTop: 6 }}>Total: <strong style={{ color: "#F9A8A8", fontSize: 14 }}>£528.00</strong></div>
+                </div>
+              </div>
+            </div>
+            <p style={{ marginTop: 8, fontSize: 13 }}><strong style={{ color: C.sage }}>Saving per worker per week: £157.68 (30%)</strong></p>
+            <p style={{ marginTop: 8 }}>Every invoice CareSyndicate issues is fully itemised. You see exactly what your workers earn, what the platform costs, and what VAT applies.</p>
           </DeepDive>
         </div>
       </div>

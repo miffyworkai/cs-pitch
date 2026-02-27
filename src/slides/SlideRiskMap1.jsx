@@ -6,11 +6,11 @@ import RiskCard from "../components/RiskCard";
 
 export default function SlideRiskMap1() {
   const risks = [
-    { icon: "\u2696\uFE0F", risk: "Joint & Several Liability", exposure: "Strict liability from 6 April 2026 if umbrella in chain", elimination: "No umbrella in supply chain. JSL trigger conditions cannot be satisfied. Zero exposure." },
-    { icon: "\uD83C\uDFF7\uFE0F", risk: "Status Misclassification", exposure: "Blanket classification. No per-engagement CEST. HMRC can pursue provider.", elimination: "CEST per engagement. Results stored permanently. Employment results auto-route to PAYE." },
-    { icon: "\uD83D\uDD0D", risk: "Opaque Supply Chain", exposure: "Can't see how workers are classified, paid, or insured.", elimination: "Direct, transparent chain. Every payment, classification, credential visible in your portal." },
+    { icon: "\u2696\uFE0F", risk: "Joint & Several Liability", exposure: "Strict liability from 6 April 2026 if umbrella in chain", elimination: "No umbrella in supply chain. JSL trigger conditions cannot be satisfied — no employment relationship, no PAYE operation, no umbrella entity. Liability cannot arise, not merely mitigated." },
+    { icon: "\uD83C\uDFF7\uFE0F", risk: "Status Misclassification", exposure: "Blanket classification. No per-engagement CEST. HMRC can pursue provider.", elimination: "Individual CEST per engagement using HMRC's own tool. Results stored permanently. Employment results auto-route to PAYE. Constitutes 'reasonable care' evidence under IR35 guidance." },
+    { icon: "\uD83D\uDD0D", risk: "Opaque Supply Chain", exposure: "Can't see how workers are classified, paid, or insured.", elimination: "Two-link chain (Provider → CareSyndicate → Worker) vs four links in the agency-umbrella model. Every payment, classification, and credential visible in your portal." },
     { icon: "\uD83D\uDCC1", risk: "No Audit Evidence", exposure: "Must request from agency. Often delayed or incomplete.", elimination: "CRM generates full audit packs on demand. CEST, payslips, credentials — permanently stored." },
-    { icon: "\uD83D\uDEE1\uFE0F", risk: "Insurance Gaps", exposure: "Verification varies. Expired policies may go unnoticed.", elimination: "£6M PL + £2M PI mandatory. CRM monitors renewals. Expired workers blocked automatically." },
+    { icon: "\uD83D\uDEE1\uFE0F", risk: "Insurance Gaps", exposure: "Verification varies. Expired policies may go unnoticed.", elimination: "£6M PL + £2M PI mandatory per worker. Automated monitoring: upload → verify → 30/14-day expiry alerts → expired workers blocked from being offered work. No manual checking." },
     { icon: "\uD83D\uDD10", risk: "DBS Compliance", exposure: "Agency holds records. Real-time visibility limited.", elimination: "Enhanced DBS on Update Service required. Real-time checks. Non-compliant workers blocked." },
   ];
 

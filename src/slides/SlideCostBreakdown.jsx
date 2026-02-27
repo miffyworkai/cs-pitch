@@ -59,6 +59,29 @@ export default function SlideCostBreakdown() {
             </motion.div>
           ))}
         </div>
+
+        {/* VAT callout banner */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1.0, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          style={{
+            marginTop: 24,
+            background: `linear-gradient(135deg, ${C.plum}, ${C.magenta})`,
+            borderRadius: 16,
+            padding: "24px 32px",
+            textAlign: "center",
+          }}
+        >
+          <div style={{ fontSize: "clamp(24px, 3vw, 34px)", fontWeight: 700, color: C.white, fontFamily: FONT_BODY }}>
+            £288,000/year
+          </div>
+          <div style={{ fontSize: 14, fontWeight: 500, color: `${C.white}CC`, marginTop: 6, lineHeight: 1.6, fontFamily: FONT_BODY }}>
+            Irrecoverable VAT for just 50 agency workers at 20 hrs/week.
+            <br />
+            <span style={{ fontStyle: "italic", color: `${C.white}99` }}>A dead cost invisible in your blended rate.</span>
+          </div>
+        </motion.div>
       </div>
     </Slide>
   );

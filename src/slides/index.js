@@ -12,6 +12,7 @@ import SlideJSLDefence from "./SlideJSLDefence";
 import SlideFinancials from "./SlideFinancials";
 import SlideRiskMap1 from "./SlideRiskMap1";
 import SlideRiskMap2 from "./SlideRiskMap2";
+import SlideObjections from "./SlideObjections";
 import SlideRoadmap from "./SlideRoadmap";
 import SlideContact from "./SlideContact";
 
@@ -30,6 +31,7 @@ export const SLIDES = [
   { key: "financial", component: SlideFinancials },
   { key: "risk1", component: SlideRiskMap1 },
   { key: "risk2", component: SlideRiskMap2 },
+  { key: "objections", component: SlideObjections },
   { key: "roadmap", component: SlideRoadmap },
   { key: "contact", component: SlideContact },
 ];
@@ -49,6 +51,7 @@ export const SLIDE_LABELS = [
   "Financials",
   "Risk Map (1)",
   "Risk Map (2)",
+  "Common Questions",
   "Roadmap",
   "Contact",
 ];

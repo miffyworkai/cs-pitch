@@ -101,7 +101,12 @@ export default function SlideJSLDefence() {
             <p style={{ marginTop: 6 }}><strong style={{ color: C.cream }}>Scope:</strong> All umbrella-agency-client supply chains where PAYE is operated.</p>
             <p style={{ marginTop: 6 }}><strong style={{ color: C.cream }}>Defence:</strong> None. Strict liability applies regardless of due diligence.</p>
             <p style={{ marginTop: 6 }}><strong style={{ color: C.cream }}>Enforcement:</strong> HMRC can issue Real Time Information notices and pursue through normal debt recovery.</p>
-            <p style={{ marginTop: 10 }}><strong style={{ color: C.cream }}>The only way to eliminate JSL risk is to remove the umbrella company from your supply chain entirely.</strong></p>
+            <p style={{ marginTop: 12, borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: 12 }}><strong style={{ color: C.cream }}>Statutory references:</strong></p>
+            <p style={{ marginTop: 6 }}><strong style={{ color: C.cream }}>Finance Act 2025, Schedule 1</strong> — the specific legislation introducing JSL for umbrella company supply chains.</p>
+            <p style={{ marginTop: 6 }}><strong style={{ color: C.cream }}>HMRC ESM4015</strong> — care workers engaged as genuine self-employed through an introduction platform are not "supplied" by that platform.</p>
+            <p style={{ marginTop: 6 }}><strong style={{ color: C.cream }}>Employment Agencies Act 1973</strong> — distinguishes introducers (lighter obligations) from employment businesses (deemed employer duties).</p>
+            <p style={{ marginTop: 6 }}><strong style={{ color: C.cream }}>Conduct Regulations 2003</strong> — introducer obligations are "significantly lighter" than employment business obligations.</p>
+            <p style={{ marginTop: 10 }}><strong style={{ color: C.cream }}>CareSyndicate's classification:</strong> Introducer and payment collection agent — not an employment business. This is why JSL trigger conditions structurally cannot be satisfied.</p>
           </DeepDive>
         </div>
       </div>
