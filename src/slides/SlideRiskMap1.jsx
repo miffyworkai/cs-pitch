@@ -3,23 +3,29 @@ import { C, FONT_DISPLAY, FONT_BODY } from "../theme";
 import Slide from "../components/Slide";
 import Stagger from "../components/Stagger";
 import RiskCard from "../components/RiskCard";
-import { IconScales, IconTag, IconSearch, IconFolder, IconShieldCheck, IconLock } from "../components/Icons";
+import { IconScales, IconTag, IconSearch, IconFolder, IconShieldCheck, IconLock, IconReceipt, IconCoins, IconTrendDown, IconClipboard, IconDocumentPen, IconLink } from "../components/Icons";
 
-export default function SlideRiskMap1() {
+export default function SlideRiskMap() {
   const risks = [
-    { icon: <IconScales size={22} color={C.plum} />, risk: "Joint & Several Liability", exposure: "Strict liability from 6 April 2026 if umbrella in chain", elimination: "No umbrella in supply chain. JSL trigger conditions cannot be satisfied — no employment relationship, no PAYE operation, no umbrella entity. Liability cannot arise, not merely mitigated." },
-    { icon: <IconTag size={22} color={C.plum} />, risk: "Status Misclassification", exposure: "Blanket classification. No per-engagement CEST. HMRC can pursue provider.", elimination: "Individual CEST per engagement using HMRC's own tool. Results stored permanently. Employment results auto-route to PAYE. Constitutes 'reasonable care' evidence under IR35 guidance." },
-    { icon: <IconSearch size={22} color={C.plum} />, risk: "Opaque Supply Chain", exposure: "Can't see how workers are classified, paid, or insured.", elimination: "Two-link chain (Provider → CareSyndicate → Worker) vs four links in the agency-umbrella model. Every payment, classification, and credential visible in your portal." },
-    { icon: <IconFolder size={22} color={C.plum} />, risk: "No Audit Evidence", exposure: "Must request from agency. Often delayed or incomplete.", elimination: "CRM generates full audit packs on demand. CEST, payslips, credentials — permanently stored." },
-    { icon: <IconShieldCheck size={22} color={C.plum} />, risk: "Insurance Gaps", exposure: "Verification varies. Expired policies may go unnoticed.", elimination: "£6M PL + £2M PI mandatory per worker. Automated monitoring: upload → verify → 30/14-day expiry alerts → expired workers blocked from being offered work. No manual checking." },
-    { icon: <IconLock size={22} color={C.plum} />, risk: "DBS Compliance", exposure: "Agency holds records. Real-time visibility limited.", elimination: "Enhanced DBS on Update Service required. Real-time checks. Non-compliant workers blocked." },
+    { icon: <IconScales size={18} color={C.plum} />, risk: "Joint & Several Liability", exposure: "Strict liability from 6 April 2026 if umbrella in chain", elimination: "No umbrella in supply chain. JSL trigger conditions cannot be satisfied — no employment relationship, no PAYE operation, no umbrella entity." },
+    { icon: <IconTag size={18} color={C.plum} />, risk: "Status Misclassification", exposure: "Blanket classification. No per-engagement CEST.", elimination: "Individual CEST per engagement using HMRC's own tool. Results stored permanently. Employment auto-routes to PAYE." },
+    { icon: <IconSearch size={18} color={C.plum} />, risk: "Opaque Supply Chain", exposure: "Can't see how workers are classified or paid.", elimination: "Two-link chain vs four. Every payment, classification, and credential visible in your portal." },
+    { icon: <IconFolder size={18} color={C.plum} />, risk: "No Audit Evidence", exposure: "Must request from agency. Often delayed.", elimination: "CRM generates full audit packs on demand. CEST, payslips, credentials — permanently stored." },
+    { icon: <IconShieldCheck size={18} color={C.plum} />, risk: "Insurance Gaps", exposure: "Expired policies may go unnoticed.", elimination: "£6M PL + £2M PI mandatory. Auto-monitoring with expiry alerts. Expired workers blocked." },
+    { icon: <IconLock size={18} color={C.plum} />, risk: "DBS Compliance", exposure: "Agency holds records. Limited visibility.", elimination: "Enhanced DBS on Update Service required. Real-time checks. Non-compliant workers blocked." },
+    { icon: <IconReceipt size={18} color={C.plum} />, risk: "Irrecoverable VAT", exposure: "20% VAT on full charge. Dead cost ~£4.40/hr.", elimination: "Model B: No VAT on worker earnings. VAT on platform fee only. Saves ~£600K/yr at scale." },
+    { icon: <IconCoins size={18} color={C.plum} />, risk: "Cost Opacity", exposure: "Blended rates with no breakdown.", elimination: "Worker rate, platform fee, and VAT shown as separate line items on every invoice." },
+    { icon: <IconTrendDown size={18} color={C.plum} />, risk: "Worker Take-Home Squeeze", exposure: "£14-16/hr after umbrella deductions.", elimination: "SE workers receive full agreed rate. PAYE workers get proper payslip. No umbrella deductions." },
+    { icon: <IconClipboard size={18} color={C.plum} />, risk: "CQC Vulnerability", exposure: "Evidence scattered across agencies.", elimination: "CQC Inspection-Ready reports generated by CRM. Full credentials, CEST, insurance in one download." },
+    { icon: <IconDocumentPen size={18} color={C.plum} />, risk: "No SE Evidence", exposure: "Substitutions and declines not tracked.", elimination: "Every decline logged. Substitution workflow with full audit trail. Evidence built continuously." },
+    { icon: <IconLink size={18} color={C.plum} />, risk: "Single Agency Dependency", exposure: "Lose access to workers if relationship fails.", elimination: "Workers onboarded with own credentials. You retain all compliance data regardless." },
   ];
 
   return (
-    <Slide bg={C.cream}>
-      <div style={{ maxWidth: 920, padding: "0 40px", width: "100%" }}>
+    <Slide bg={C.cream} style={{ justifyContent: "flex-start" }}>
+      <div style={{ maxWidth: 960, padding: "50px 40px", width: "100%" }}>
         <Stagger>
-          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
             <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase", color: C.sage, fontFamily: FONT_BODY }}>
               Risk Elimination
             </div>
@@ -28,26 +34,47 @@ export default function SlideRiskMap1() {
         </Stagger>
 
         <Stagger delay={0.15}>
-          <h2 style={{ fontSize: "clamp(28px, 3.5vw, 44px)", fontWeight: 700, color: C.plum, margin: "0 0 8px", lineHeight: 1.15, fontFamily: FONT_DISPLAY, letterSpacing: "-0.02em" }}>
+          <h2 style={{ fontSize: "clamp(24px, 3vw, 38px)", fontWeight: 700, color: C.plum, margin: "0 0 6px", lineHeight: 1.15, fontFamily: FONT_DISPLAY, letterSpacing: "-0.02em" }}>
             12 Risks Identified. <span style={{ color: C.sage, fontStyle: "italic" }}>12 Eliminated.</span>
           </h2>
-          <p style={{ fontSize: 14, color: `${C.dark}66`, marginBottom: 28, fontFamily: FONT_BODY }}>
+          <p style={{ fontSize: 13, color: `${C.dark}66`, marginBottom: 20, fontFamily: FONT_BODY }}>
             Click any card to see how CareSyndicate structurally eliminates each risk.
           </p>
         </Stagger>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 12 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 10 }}>
           {risks.map((r, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 + i * 0.08, duration: 0.6 }}
+              transition={{ delay: 0.3 + i * 0.05, duration: 0.5 }}
             >
               <RiskCard {...r} />
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.0, duration: 0.6 }}
+          style={{
+            marginTop: 14,
+            background: `${C.sage}08`,
+            border: `1.5px solid ${C.sage}30`,
+            borderRadius: 12,
+            padding: "14px 24px",
+            textAlign: "center",
+          }}
+        >
+          <span style={{ fontSize: 14, fontWeight: 700, color: C.sage, fontFamily: FONT_BODY }}>
+            Residual risk to provider: Zero.
+          </span>
+          <span style={{ fontSize: 12, color: `${C.dark}77`, marginLeft: 10, fontFamily: FONT_BODY }}>
+            A structural consequence of removing the umbrella and using HMRC's own tools.
+          </span>
+        </motion.div>
       </div>
     </Slide>
   );

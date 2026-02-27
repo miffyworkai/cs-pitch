@@ -14,12 +14,12 @@ export default function RiskCard({ icon, risk, exposure, elimination }) {
         background: flipped
           ? `linear-gradient(135deg, ${C.sage}, #5A7E65)`
           : C.white,
-        borderRadius: 14,
-        padding: "18px 20px",
+        borderRadius: 12,
+        padding: "14px 16px",
         cursor: "pointer",
         border: `1px solid ${flipped ? C.sage + "60" : C.blush}`,
         transition: "all 0.35s ease",
-        minHeight: 140,
+        minHeight: 110,
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",

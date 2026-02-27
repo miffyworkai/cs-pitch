@@ -10,8 +10,7 @@ import SlideAutomation from "./SlideAutomation";
 import SlideDeadline from "./SlideDeadline";
 import SlideJSLDefence from "./SlideJSLDefence";
 import SlideFinancials from "./SlideFinancials";
-import SlideRiskMap1 from "./SlideRiskMap1";
-import SlideRiskMap2 from "./SlideRiskMap2";
+import SlideRiskMap from "./SlideRiskMap1";
 import SlideObjections from "./SlideObjections";
 import SlideRoadmap from "./SlideRoadmap";
 import SlideContact from "./SlideContact";
@@ -29,8 +28,7 @@ export const SLIDES = [
   { key: "deadline", component: SlideDeadline },
   { key: "jsl", component: SlideJSLDefence },
   { key: "financial", component: SlideFinancials },
-  { key: "risk1", component: SlideRiskMap1 },
-  { key: "risk2", component: SlideRiskMap2 },
+  { key: "risk", component: SlideRiskMap },
   { key: "objections", component: SlideObjections },
   { key: "roadmap", component: SlideRoadmap },
   { key: "contact", component: SlideContact },
@@ -49,8 +47,7 @@ export const SLIDE_LABELS = [
   "April 2026",
   "JSL Defence",
   "Financials",
-  "Risk Map (1)",
-  "Risk Map (2)",
+  "Risk Map",
   "Common Questions",
   "Roadmap",
   "Contact",

@@ -31,7 +31,7 @@ export default function SlidePlatformFeatures() {
           </h2>
         </Stagger>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 16 }}>
           {features.map((f, i) => (
             <motion.div
               key={i}

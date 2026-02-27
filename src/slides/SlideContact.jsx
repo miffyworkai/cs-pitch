@@ -52,7 +52,10 @@ export default function SlideContact() {
         </Stagger>
 
         <Stagger delay={0.7}>
-          <motion.div
+          <motion.a
+            href="https://www.syndicate.care/"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
             style={{
@@ -66,13 +69,33 @@ export default function SlideContact() {
               cursor: "pointer",
               fontFamily: FONT_BODY,
               boxShadow: `0 8px 32px ${C.magenta}25`,
+              textDecoration: "none",
+            }}
+          >
+            www.syndicate.care
+          </motion.a>
+        </Stagger>
+
+        <Stagger delay={0.9}>
+          <a
+            href="mailto:hello@syndicate.care"
+            style={{
+              display: "inline-block",
+              marginTop: 16,
+              fontSize: 15,
+              color: C.plum,
+              fontFamily: FONT_BODY,
+              fontWeight: 500,
+              textDecoration: "none",
+              borderBottom: `1px solid ${C.orchid}`,
+              paddingBottom: 2,
             }}
           >
             hello@syndicate.care
-          </motion.div>
+          </a>
         </Stagger>
 
-        <Stagger delay={1.0}>
+        <Stagger delay={1.1}>
           <div style={{
             marginTop: 48,
             fontSize: 12,
