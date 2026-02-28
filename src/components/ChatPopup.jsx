@@ -19,13 +19,13 @@ KNOWLEDGE BASE:
 CareSyndicate is an AI-native workforce platform that replaces the broken agency-umbrella model in UK domiciliary care with direct, compliant engagements. We remove the middleman and automate the compliance burden.
 
 THE PROBLEM:
-The UK care sector faces a £6.7 billion domiciliary care market with 152,000 unfilled roles and 111,000 vacant posts. The Health and Care Worker visa route closed in July 2025, causing a 91% drop in international recruitment. Vacancy rates exceed 10% in home care — three times higher than other sectors. The agency-umbrella model creates four converging crises: workforce collapse, a funding squeeze (CQC found a direct link between hourly pay rates and A&E admissions), compliance overload across CQC, HMRC IR35, JSL, local authority and NHS standards, and a care continuity crisis where workers receive just £14–16 per hour after umbrella deductions from a £22–25 per hour charge rate.
+The UK care sector faces a roughly £7 billion domiciliary care market with 111,000 unfilled roles (Skills for Care 2024/25) across a 1.7 million post workforce. The Health and Care Worker visa route closed in July 2025, causing a 91% drop in international recruitment. Vacancy rates are around 7% in adult social care — roughly three times higher than the wider economy. The agency-umbrella model creates four converging crises: workforce collapse, a funding squeeze (CQC found a direct link between hourly pay rates and A&E admissions), compliance overload across CQC, HMRC IR35, JSL, local authority and NHS standards, and a care continuity crisis where workers receive just £14–16 per hour after umbrella deductions from a £22–25 per hour charge rate.
 
 SUPPLY CHAIN:
 The current chain runs: Care Provider to Agency to Umbrella Company to Worker — opaque, multi-layered, and JSL-exposed. CareSyndicate's chain is: Care Provider to CareSyndicate (as introducer) to Worker — direct, transparent, and with no JSL exposure. The key distinction is that CareSyndicate operates as an introducer, not an employment business. We do not employ workers or operate PAYE on their behalf.
 
 JSL (JOINT AND SEVERAL LIABILITY):
-The Finance Act 2025 introduces strict, no-defence liability from 6 April 2026. If an umbrella company fails to remit PAYE or NI to HMRC, HMRC can pursue the care provider directly. This is strict liability with no statutory defence, even with due diligence, and no grandfather clause for existing arrangements. The only way to eliminate JSL risk is to remove the umbrella company entirely. CareSyndicate eliminates all four JSL trigger conditions: no umbrella employs anyone, no umbrella operates PAYE, no umbrella sits in the supply chain, and no employment business supplies workers.
+The Finance Bill 2025-26 (Clause 24, new Chapter 11 ITEPA 2003) introduces strict, no-defence liability from 6 April 2026. If an umbrella company fails to remit PAYE or NI to HMRC, HMRC can pursue the agency and then the care provider directly. This is strict liability for PAYE and Class 1 NICs with no statutory defence, even with due diligence, and no grandfather clause for existing arrangements. The only way to eliminate JSL risk is to remove the umbrella company entirely. CareSyndicate eliminates all four JSL trigger conditions: no umbrella employs anyone, no umbrella operates PAYE, no umbrella sits in the supply chain, and no employment business supplies workers.
 
 PLATFORM — FOUR PILLARS:
 1. AI-Powered Matching: ranked shortlists in seconds with plain-English explanations covering skills, qualifications, location and availability.
@@ -37,10 +37,10 @@ COMPLIANCE ENGINE DETAIL:
 Every engagement is assessed using HMRC's own CEST tool — not a proprietary test. Six dimensions are scored: client concentration, substitution evidence, financial risk, control levels, business entity status and CEST determination. Results feed into green, amber or red traffic lights. Routing is automatic: self-employed workers are paid to their business account, limited company workers to their company account, and where CEST returns employment, the engagement is routed to an independent payroll bureau with full PAYE.
 
 TWO VAT MODELS:
-Model A (Standard VAT): 20% VAT on the full charge, reclaimable if the provider is VAT-registered. Model B (VAT-Aligned Care Supply): no VAT on worker earnings, VAT only on the platform fee. This saves approximately £600,000 per year for a 100-worker provider. Most care providers are VAT-exempt, making irrecoverable VAT a dead cost of roughly £4.40 per hour per worker under the agency model.
+Model A (Standard VAT): 20% VAT on the full charge, reclaimable if the provider is VAT-registered. Model B (VAT-Aligned Care Supply): no VAT on worker earnings, VAT only on the platform fee. This saves approximately £460,000 per year for a 100-worker provider (at £22/hr blended rate). Most care providers are VAT-exempt, making irrecoverable VAT a dead cost of roughly £4.40 per hour per worker under the agency model. Note: providers operating under the Nursing Agencies VAT Concession may already benefit from partial VAT relief on the labour element — Model B extends this principle more broadly.
 
 FINANCIAL IMPACT (illustrative — 50 workers, 20 hours per week, £18 per hour worker rate):
-Current agency model: annual cost approximately £1,372,800, blended rate £22–25 per hour, worker receives £15 per hour, true cost roughly £26.40 per hour with irrecoverable VAT. CareSyndicate Model B: annual cost approximately £1,070,680, worker rate £18 per hour gross (worker receives the full amount), true cost roughly £20.59 per hour. That is a saving of approximately £302,120 per year — 22% — with full compliance, risk elimination and complete transparency. At 100 workers the VAT savings alone reach approximately £600,000 per year.
+Current agency model: annual cost approximately £1,372,800, blended rate £22–25 per hour, worker receives £15 per hour, true cost roughly £26.40 per hour with irrecoverable VAT. CareSyndicate Model B: annual cost approximately £1,070,680, worker rate £18 per hour gross (worker receives the full amount), true cost roughly £20.59 per hour including employer on-costs. That is a saving of approximately £302,120 per year — 22% — with full compliance, risk elimination and complete transparency. At 100 workers the irrecoverable VAT savings alone reach approximately £458,000 per year (at £22 per hour blended rate).
 
 OPERATIONAL SIMPLICITY:
 A provider's involvement reduces to three actions: induct workers to care plans as needed (clinical processes do not change), approve timesheets weekly (averaging 2–3 minutes per worker per week), and pay one consolidated invoice per period covering all workers and all routes. Training is a single two-hour session.
@@ -170,11 +170,15 @@ export default function ChatPopup() {
     ];
 
     try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 15000);
       const res = await fetch(EDGE_FN_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messages: apiMessages }),
+        signal: controller.signal,
       });
+      clearTimeout(timeout);
 
       if (!res.ok) {
         const errBody = await res.text();
@@ -204,10 +208,10 @@ export default function ChatPopup() {
   };
 
   const suggestedQuestions = [
-    "How does this save us money?",
-    "What is JSL and how does it affect us?",
-    "How does the compliance engine work?",
-    "What does the transition look like?",
+    "Explain how CareSyndicate addresses JSL risk.",
+    "What happens on 6 April 2026?",
+    "How does the platform handle compliance?",
+    "What would a pilot look like for us?",
   ];
 
   return (
@@ -237,6 +241,7 @@ export default function ChatPopup() {
           fontFamily: FONT_BODY,
         }}
         title="Ask about the pitch"
+        aria-label={isOpen ? "Close chat" : "Open chat assistant"}
       >
         {isOpen ? "×" : <IconChat size={20} color={C.white} />}
       </motion.button>
@@ -462,6 +467,7 @@ export default function ChatPopup() {
               <button
                 onClick={sendMessage}
                 disabled={!input.trim() || isLoading}
+                aria-label="Send message"
                 style={{
                   width: 40,
                   height: 40,

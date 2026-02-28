@@ -2,15 +2,11 @@ import SlideHero from "./SlideHero";
 import SlideCrisis from "./SlideCrisis";
 import SlideComplianceBurden from "./SlideComplianceBurden";
 import SlideBrokenModel from "./SlideBrokenModel";
-import SlideSupplyChain from "./SlideSupplyChain";
-import SlideCostBreakdown from "./SlideCostBreakdown";
-import SlideSolution from "./SlideSolution";
-import SlidePlatformFeatures from "./SlidePlatformFeatures";
+import SlideSupplyChainCost from "./SlideSupplyChainCost";
+import SlideSolutionPlatform from "./SlideSolutionPlatform";
 import SlideHowItWorks from "./SlideHowItWorks";
 import SlideAutomation from "./SlideAutomation";
-import SlideDeadline from "./SlideDeadline";
-import SlideJSLDefence from "./SlideJSLDefence";
-import SlideFinancials from "./SlideFinancials";
+import SlideDeadlineJSL from "./SlideDeadlineJSL";
 import SlideRiskMap from "./SlideRiskMap1";
 import SlideObjections from "./SlideObjections";
 import SlideRoadmap from "./SlideRoadmap";
@@ -21,15 +17,11 @@ export const SLIDES = [
   { key: "crisis", component: SlideCrisis },
   { key: "compliance", component: SlideComplianceBurden },
   { key: "broken", component: SlideBrokenModel },
-  { key: "supply", component: SlideSupplyChain },
-  { key: "cost", component: SlideCostBreakdown },
-  { key: "solution", component: SlideSolution },
-  { key: "platform", component: SlidePlatformFeatures },
+  { key: "supply-cost", component: SlideSupplyChainCost },
+  { key: "solution-platform", component: SlideSolutionPlatform },
   { key: "how", component: SlideHowItWorks },
   { key: "auto", component: SlideAutomation },
-  { key: "deadline", component: SlideDeadline },
-  { key: "jsl", component: SlideJSLDefence },
-  { key: "financial", component: SlideFinancials },
+  { key: "deadline-jsl", component: SlideDeadlineJSL },
   { key: "risk", component: SlideRiskMap },
   { key: "objections", component: SlideObjections },
   { key: "roadmap", component: SlideRoadmap },
@@ -41,15 +33,11 @@ export const SLIDE_LABELS = [
   "The Crisis",
   "Compliance",
   "Broken Model",
-  "Supply Chain",
-  "The Cost",
-  "Our Solution",
-  "Platform",
+  "Supply & Cost",
+  "Our Platform",
   "How It Works",
   "Automation",
   "April 2026",
-  "JSL Defence",
-  "Financials",
   "Risk Map",
   "Common Questions",
   "Roadmap",

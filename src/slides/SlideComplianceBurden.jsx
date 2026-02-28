@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { C, FONT_DISPLAY, FONT_BODY } from "../theme";
 import Slide from "../components/Slide";
 import Stagger from "../components/Stagger";
+import Tooltip from "../components/Tooltip";
 import { IconShieldCheck, IconPeople, IconScales, IconFileText, IconClipboardCheck } from "../components/Icons";
 
 export default function SlideComplianceBurden() {
@@ -11,30 +12,35 @@ export default function SlideComplianceBurden() {
       title: "CQC Regulation 17",
       subtitle: "Good Governance",
       demands: "Effective internal audit covering workforce. Records for every person delivering care — including self-employed workers.",
+      tip: "Regulation 17 requires providers to maintain accurate, complete, and contemporaneous records. For workforce, this means full audit trails for every person involved in care delivery.",
     },
     {
       icon: <IconPeople size={26} color={C.magenta} />,
       title: "CQC Regulations 18 & 19",
       subtitle: "Staffing & Fit Persons",
       demands: "Every worker verified as fit and proper. CQC defines \"employed\" broadly — all workers fall in scope, regardless of tax status.",
+      tip: "CQC's definition of 'employed' extends to anyone working for or on behalf of the provider — including agency, self-employed, and bank staff. Fit and proper person checks must cover all.",
     },
     {
       icon: <IconScales size={26} color={C.magenta} />,
       title: "HMRC Reasonable Care",
       subtitle: "IR35 / Off-Payroll Rules",
       demands: "Per-engagement status assessment. If you get it wrong, the tax liability shifts to you. No blanket classifications accepted.",
+      tip: "HMRC expects medium/large clients to use CEST for each engagement individually. Blanket determinations are treated as a failure of reasonable care, shifting the tax liability to the fee-payer.",
     },
     {
       icon: <IconFileText size={26} color={C.magenta} />,
       title: "LA & NHS Commissioning",
       subtitle: "Contract Monitoring",
       demands: "Commissioners require evidence of compliant workforce arrangements, appropriate remuneration, and safe recruitment.",
+      tip: "Local authority and NHS commissioners increasingly include workforce compliance clauses in contracts, requiring transparent evidence of pay rates, employment status, and recruitment processes.",
     },
     {
       icon: <IconClipboardCheck size={26} color={C.magenta} />,
       title: "NHS Heritage Standards",
       subtitle: "Framework-Level Audit",
       demands: "Providers with NHS backgrounds carry framework-level audit rigour into social care — transparent rates, documented classifications.",
+      tip: "NHS framework providers transitioning into social care are accustomed to rigorous audit standards. These expectations carry over, setting a higher bar for workforce governance.",
     },
   ];
 
@@ -76,7 +82,7 @@ export default function SlideComplianceBurden() {
               letterSpacing: "-0.02em",
             }}
           >
-            Five Frameworks. <span style={{ color: C.magenta, fontStyle: "italic" }}>Zero Margin for Error.</span>
+            <strong>Five</strong> Frameworks. <span style={{ color: C.magenta, fontStyle: "italic", textDecoration: "underline", textDecorationColor: `${C.magenta}40`, textUnderlineOffset: "4px" }}>Zero Margin for Error.</span>
           </h2>
         </Stagger>
 
@@ -118,7 +124,9 @@ export default function SlideComplianceBurden() {
                 <div style={{ marginBottom: 10, lineHeight: 1 }}>{f.icon}</div>
                 <div style={{ fontSize: 13, fontWeight: 700, color: C.dark, marginBottom: 2, fontFamily: FONT_BODY }}>{f.title}</div>
                 <div style={{ fontSize: 11, fontWeight: 500, color: C.magenta, marginBottom: 8, fontFamily: FONT_BODY }}>{f.subtitle}</div>
-                <div style={{ fontSize: 12, color: `${C.dark}77`, lineHeight: 1.55, fontFamily: FONT_BODY }}>{f.demands}</div>
+                <div style={{ fontSize: 12, color: `${C.dark}77`, lineHeight: 1.55, fontFamily: FONT_BODY }}>
+                  <Tooltip content={f.tip}>{f.demands}</Tooltip>
+                </div>
               </div>
             </motion.div>
           ))}
@@ -146,7 +154,9 @@ export default function SlideComplianceBurden() {
                 <div style={{ marginBottom: 10, lineHeight: 1 }}>{f.icon}</div>
                 <div style={{ fontSize: 13, fontWeight: 700, color: C.dark, marginBottom: 2, fontFamily: FONT_BODY }}>{f.title}</div>
                 <div style={{ fontSize: 11, fontWeight: 500, color: C.magenta, marginBottom: 8, fontFamily: FONT_BODY }}>{f.subtitle}</div>
-                <div style={{ fontSize: 12, color: `${C.dark}77`, lineHeight: 1.55, fontFamily: FONT_BODY }}>{f.demands}</div>
+                <div style={{ fontSize: 12, color: `${C.dark}77`, lineHeight: 1.55, fontFamily: FONT_BODY }}>
+                  <Tooltip content={f.tip}>{f.demands}</Tooltip>
+                </div>
               </div>
             </motion.div>
           ))}

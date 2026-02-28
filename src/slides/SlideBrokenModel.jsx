@@ -38,11 +38,11 @@ export default function SlideBrokenModel() {
 
         <div style={{ marginTop: 8 }}>
           <DeepDive title="Why umbrella companies create liability" icon={<span>&#9888;</span>} color={C.magenta}>
-            <p>Umbrella companies sit between the agency and the worker, operating PAYE payroll. The problem: if the umbrella fails to remit tax to HMRC, under the <strong style={{ color: C.dark }}>Finance Act 2025 Joint & Several Liability</strong> rules (effective 6 April 2026), HMRC can pursue the care provider directly.</p>
+            <p>Umbrella companies sit between the agency and the worker, operating PAYE payroll. The problem: if the umbrella fails to remit tax to HMRC, under the <strong style={{ color: C.dark }}>Joint & Several Liability</strong> rules in the Finance Bill 2025-26 (effective 6 April 2026), HMRC can pursue the care provider directly.</p>
             <p style={{ marginTop: 10 }}>This is <strong style={{ color: C.dark }}>strict liability</strong> — there is no statutory defence, even if the provider conducted due diligence on the agency. No grandfather clause applies to existing arrangements.</p>
           </DeepDive>
           <DeepDive title="The hidden VAT problem" icon={<IconReceipt size={18} color={C.magenta} />} color={C.magenta}>
-            <p>Agencies charge 20% VAT on the full blended rate. For VAT-exempt care providers (most are), this is completely irrecoverable — a dead cost of ~£4.40/hr per worker on a £22/hr charge. At scale, a 100-worker provider loses over <strong style={{ color: C.dark }}>£600,000/year</strong> in irrecoverable VAT.</p>
+            <p>Agencies charge 20% VAT on the full blended rate. For VAT-exempt care providers (most are), this is completely irrecoverable — a dead cost of ~£4.40/hr per worker on a £22/hr charge. At scale, a 100-worker provider loses over <strong style={{ color: C.dark }}>£450,000/year</strong> in irrecoverable VAT.</p>
           </DeepDive>
           <DeepDive title="Why agencies cannot simply adapt" icon={<IconBarrier size={18} color={C.magenta} />} color={C.magenta}>
             <p><strong style={{ color: C.dark }}>The cost premium is structural:</strong> agencies charge £19.57/hr versus £9.90/hr for permanent staff — a 98% markup. The umbrella IS their margin structure. Removing it destroys the business model they depend on.</p>

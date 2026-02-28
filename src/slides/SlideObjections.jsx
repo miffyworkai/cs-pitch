@@ -22,7 +22,7 @@ const objections = [
   },
   {
     q: "We need to consult our solicitors.",
-    a: "Encouraged. The legal position is documented against Finance Act 2025, HMRC ESM4015, and Employment Agencies Act 1973. We welcome independent review.",
+    a: "Encouraged. The legal position is documented against Finance Bill 2025-26 (Clause 24, ITEPA 2003), HMRC ESM4015, and Employment Agencies Act 1973. We welcome independent review.",
   },
 ];
 

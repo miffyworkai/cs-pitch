@@ -20,8 +20,8 @@ export default function SlideAutomation() {
   ];
 
   return (
-    <Slide bg={C.cream} style={{ justifyContent: "flex-start" }}>
-      <div style={{ maxWidth: 860, padding: "60px 40px", width: "100%" }}>
+    <Slide bg={C.cream}>
+      <div style={{ maxWidth: 860, padding: "0 40px", width: "100%" }}>
         <Stagger>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
             <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase", color: C.sage, fontFamily: FONT_BODY }}>

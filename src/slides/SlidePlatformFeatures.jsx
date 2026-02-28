@@ -70,7 +70,7 @@ export default function SlidePlatformFeatures() {
           </DeepDive>
           <DeepDive title="Two VAT models" icon={<IconChart size={18} color={C.plum} />} color={C.plum}>
             <p><strong style={{ color: C.dark }}>Model A — Standard VAT:</strong> 20% VAT on full charge. Reclaimable if VAT-registered.</p>
-            <p style={{ marginTop: 8 }}><strong style={{ color: C.dark }}>Model B — VAT-Aligned Care Supply:</strong> No VAT on worker earnings. VAT only on platform fee. Saves ~£600K/yr for a 100-worker provider.</p>
+            <p style={{ marginTop: 8 }}><strong style={{ color: C.dark }}>Model B — VAT-Aligned Care Supply:</strong> No VAT on worker earnings. VAT only on platform fee. Saves ~£460K/yr for a 100-worker provider.</p>
           </DeepDive>
         </div>
       </div>

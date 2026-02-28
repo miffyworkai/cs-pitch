@@ -29,7 +29,7 @@ export default function SlideHowItWorks() {
 
         <Stagger delay={0.15}>
           <h2 style={{ fontSize: "clamp(30px, 4vw, 48px)", fontWeight: 700, color: C.plum, margin: "0 0 12px", lineHeight: 1.1, fontFamily: FONT_DISPLAY, letterSpacing: "-0.02em" }}>
-            Simpler, Not <span style={{ color: C.sage, fontStyle: "italic" }}>More Complex</span>
+            <span style={{ textDecoration: "underline", textDecorationColor: `${C.plum}40`, textUnderlineOffset: "4px" }}>Simpler</span>, <span style={{ color: C.sage }}>Not More Complex</span>
           </h2>
         </Stagger>
 

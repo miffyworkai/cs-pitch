@@ -73,8 +73,8 @@ export default function SlideHero() {
           >
             {[
               { val: "6.7", pre: "\u00A3", suf: "B", label: "UK Domiciliary Market" },
-              { val: "152", suf: "K", label: "Unfilled Roles" },
-              { val: "1.6", suf: "M", label: "Care Workforce" },
+              { val: "111", suf: "K", label: "Unfilled Roles" },
+              { val: "1.7", suf: "M", label: "Care Workforce" },
             ].map((s, i) => (
               <div key={i} style={{ textAlign: "center" }}>
                 <div

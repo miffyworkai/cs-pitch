@@ -73,7 +73,7 @@ export default function SlideDeadline() {
             fontWeight: 300,
             textAlign: "center",
           }}>
-            The Finance Act 2025 introduces strict, no-defence liability for care providers
+            The Finance Bill 2025-26 introduces strict, no-defence liability for care providers
             with umbrella companies in their supply chain.
           </p>
         </Stagger>

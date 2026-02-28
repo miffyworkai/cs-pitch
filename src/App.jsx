@@ -131,6 +131,8 @@ export default function App() {
             key={i}
             onClick={() => goTo(i)}
             title={label}
+            aria-label={`Go to slide ${i + 1}: ${label}`}
+            aria-current={i === slide ? "step" : undefined}
             style={{
               width: i === slide ? 20 : 8,
               height: 8,
@@ -160,6 +162,8 @@ export default function App() {
       >
         <button
           onClick={prev}
+          aria-label="Previous slide"
+          disabled={slide === 0}
           style={{
             width: 40,
             height: 40,
@@ -179,6 +183,8 @@ export default function App() {
         </button>
         <button
           onClick={next}
+          aria-label="Next slide"
+          disabled={slide === totalSlides - 1}
           style={{
             width: 40,
             height: 40,
@@ -207,6 +213,9 @@ export default function App() {
           initial="enter"
           animate="center"
           exit="exit"
+          role="region"
+          aria-live="polite"
+          aria-label={`Slide ${slide + 1} of ${totalSlides}: ${SLIDE_LABELS[slide]}`}
           transition={{
             duration: 0.55,
             ease: [0.22, 1, 0.36, 1],

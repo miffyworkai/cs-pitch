@@ -129,7 +129,7 @@ export default function SlideCrisis() {
                   style={{
                     fontSize: "clamp(20px, 2.5vw, 28px)",
                     fontWeight: 700,
-                    color: C.magenta,
+                    color: C.plum,
                     marginBottom: 10,
                     fontFamily: FONT_BODY,
                   }}

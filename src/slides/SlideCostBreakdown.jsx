@@ -74,7 +74,7 @@ export default function SlideCostBreakdown() {
           }}
         >
           <div style={{ fontSize: "clamp(24px, 3vw, 34px)", fontWeight: 700, color: C.white, fontFamily: FONT_BODY }}>
-            £288,000/year
+            £229,000/year
           </div>
           <div style={{ fontSize: 14, fontWeight: 500, color: `${C.white}CC`, marginTop: 6, lineHeight: 1.6, fontFamily: FONT_BODY }}>
             Irrecoverable VAT for just 50 agency workers at 20 hrs/week.

@@ -120,8 +120,8 @@ export default function SlideFinancials() {
 
         <div style={{ marginTop: 16 }}>
           <DeepDive title="VAT savings at scale" icon={<IconChart size={18} color={C.sage} />} color={C.sage}>
-            <p>A provider with <strong style={{ color: C.dark }}>100 workers at 20 hours/week</strong> eliminates <strong style={{ color: C.dark }}>£546,000–£600,000/year</strong> in irrecoverable VAT by using Model B instead of a standard agency arrangement.</p>
-            <p style={{ marginTop: 8 }}><strong style={{ color: C.dark }}>10–20× ROI:</strong> CareSyndicate's service cost is £15,000–£30,000/year. VAT recovery alone returns 10–20× that figure.</p>
+            <p>A provider with <strong style={{ color: C.dark }}>100 workers at 20 hours/week</strong> eliminates <strong style={{ color: C.dark }}>~£458,000/year</strong> in irrecoverable VAT by using Model B instead of a standard agency arrangement (at £22/hr blended rate).</p>
+            <p style={{ marginTop: 8 }}><strong style={{ color: C.dark }}>10× ROI:</strong> CareSyndicate's platform fees scale with workforce size. VAT recovery alone returns multiples of the platform cost.</p>
             <p style={{ marginTop: 8 }}>Even under Model A (standard VAT), all compliance, risk elimination, and transparency benefits remain identical.</p>
           </DeepDive>
           <DeepDive title="What a transparent invoice looks like" icon={<IconFileText size={18} color={C.sage} />} color={C.sage}>

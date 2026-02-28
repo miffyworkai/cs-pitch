@@ -103,7 +103,7 @@ export default function SlideJSLDefence() {
             <p style={{ marginTop: 6 }}><strong style={{ color: C.dark }}>Defence:</strong> None. Strict liability applies regardless of due diligence.</p>
             <p style={{ marginTop: 6 }}><strong style={{ color: C.dark }}>Enforcement:</strong> HMRC can issue Real Time Information notices and pursue through normal debt recovery.</p>
             <p style={{ marginTop: 12, borderTop: `1px solid ${C.blush}`, paddingTop: 12 }}><strong style={{ color: C.dark }}>Statutory references:</strong></p>
-            <p style={{ marginTop: 6 }}><strong style={{ color: C.dark }}>Finance Act 2025, Schedule 1</strong> — the specific legislation introducing JSL for umbrella company supply chains.</p>
+            <p style={{ marginTop: 6 }}><strong style={{ color: C.dark }}>Finance Bill 2025-26, Clause 24</strong> — new Chapter 11 ITEPA 2003, the specific legislation introducing JSL for umbrella company supply chains.</p>
             <p style={{ marginTop: 6 }}><strong style={{ color: C.dark }}>HMRC ESM4015</strong> — care workers engaged as genuine self-employed through an introduction platform are not "supplied" by that platform.</p>
             <p style={{ marginTop: 6 }}><strong style={{ color: C.dark }}>Employment Agencies Act 1973</strong> — distinguishes introducers (lighter obligations) from employment businesses (deemed employer duties).</p>
             <p style={{ marginTop: 6 }}><strong style={{ color: C.dark }}>Conduct Regulations 2003</strong> — introducer obligations are "significantly lighter" than employment business obligations.</p>
