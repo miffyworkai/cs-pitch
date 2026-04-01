@@ -5,7 +5,7 @@ import Stagger from "../components/Stagger";
 
 export default function SlideSupplyChainCost() {
   const chainOld = ["Care Provider", "Agency", "Umbrella Co.", "Worker"];
-  const chainNew = ["Care Provider", "CareSyndicate", "Worker"];
+  const chainNew = ["Care Provider", "Agency", "CareSyndicate", "Worker"];
 
   const stats = [
     { val: "£22–25/hr", label: "Blended rate charged", sub: "No cost breakdown provided" },
@@ -86,10 +86,10 @@ export default function SlideSupplyChainCost() {
           {/* NEW chain */}
           <Stagger delay={0.6}>
             <div style={{
-              background: `${C.sage}08`,
+              background: `${C.sage}18`,
               borderRadius: 14,
               padding: "20px 22px",
-              border: `1px solid ${C.sage}25`,
+              border: `1px solid ${C.sage}40`,
               height: "100%",
             }}>
               <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: C.sage, marginBottom: 14, fontFamily: FONT_BODY }}>
@@ -111,7 +111,7 @@ export default function SlideSupplyChainCost() {
                         textAlign: "center",
                       }}
                     >
-                      {s === "CareSyndicate" ? "CareSyndicate (Introducer)" : s}
+                      {s}
                     </span>
                     {i < chainNew.length - 1 && (
                       <span style={{ color: `${C.dark}33`, fontSize: 16 }}>&#8595;</span>
