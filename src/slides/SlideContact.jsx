@@ -53,7 +53,7 @@ export default function SlideContact() {
 
         <Stagger delay={0.7}>
           <motion.a
-            href="https://www.syndicate.care/"
+            href="https://caresyndicate.ai/"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.03 }}
@@ -72,13 +72,13 @@ export default function SlideContact() {
               textDecoration: "none",
             }}
           >
-            www.syndicate.care
+            caresyndicate.ai
           </motion.a>
         </Stagger>
 
         <Stagger delay={0.9}>
           <a
-            href="mailto:hello@syndicate.care"
+            href="mailto:william@caresyndicate.ai"
             style={{
               display: "inline-block",
               marginTop: 16,
@@ -91,7 +91,7 @@ export default function SlideContact() {
               paddingBottom: 2,
             }}
           >
-            hello@syndicate.care
+            william@caresyndicate.ai
           </a>
         </Stagger>
 
